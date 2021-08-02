@@ -1,0 +1,14 @@
+12:25:05.521 [main] INFO  yxl.MainApplication - Starting MainApplication using Java 1.8.0_251 on yxl-RCBZ with PID 9685 (/home/yxl/IdeaProjects/TestAppOneMod/target/classes started by yxl in /home/yxl/IdeaProjects/TestAppOneMod)
+12:25:05.526 [main] INFO  yxl.MainApplication - The following profiles are active: 8080
+12:27:34.241 [main] INFO  yxl.MainApplication - Starting MainApplication using Java 1.8.0_251 on yxl-RCBZ with PID 10044 (/home/yxl/IdeaProjects/TestAppOneMod/target/classes started by yxl in /home/yxl/IdeaProjects/TestAppOneMod)
+12:27:34.247 [main] INFO  yxl.MainApplication - The following profiles are active: 8080
+12:28:42.475 [main] INFO  yxl.MainApplication - Starting MainApplication using Java 1.8.0_251 on yxl-RCBZ with PID 10307 (/home/yxl/IdeaProjects/TestAppOneMod/target/classes started by yxl in /home/yxl/IdeaProjects/TestAppOneMod)
+12:28:42.480 [main] INFO  yxl.MainApplication - The following profiles are active: 8080
+12:28:43.054 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+12:28:43.054 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+12:28:43.054 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+12:28:43.080 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:28:43.529 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+12:28:43.540 [main] INFO  yxl.MainApplication - Started MainApplication in 1.326 seconds (JVM running for 1.725)
+12:30:22.505 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:30:22.644 [http-nio-8080-exec-1] INFO  yxl.UserAndTask.filter.CheckUserHandle - url:/users/test;op:用户登录;type:用户操作
