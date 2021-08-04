@@ -1,10 +1,14 @@
-12:28:42.475 [main] INFO  yxl.MainApplication - Starting MainApplication using Java 1.8.0_251 on yxl-RCBZ with PID 10307 (/home/yxl/IdeaProjects/TestAppOneMod/target/classes started by yxl in /home/yxl/IdeaProjects/TestAppOneMod)
-12:28:42.480 [main] INFO  yxl.MainApplication - The following profiles are active: 8080
-12:28:43.054 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-12:28:43.054 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-12:28:43.054 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
-12:28:43.080 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-12:28:43.529 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-12:28:43.540 [main] INFO  yxl.MainApplication - Started MainApplication in 1.326 seconds (JVM running for 1.725)
-12:30:22.505 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-12:30:22.644 [http-nio-8080-exec-1] INFO  yxl.UserAndTask.filter.CheckUserHandle - url:/users/test;op:用户登录;type:用户操作
+13:13:24.759 [main] INFO  yxl.MainApplication - Starting MainApplication using Java 1.8.0_251 on yxl-RCBZ with PID 7553 (/home/yxl/IdeaProjects/TestAppOneMod/target/classes started by yxl in /home/yxl/IdeaProjects/TestAppOneMod)
+13:13:24.766 [main] INFO  yxl.MainApplication - The following profiles are active: 8080
+13:13:25.645 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+13:13:25.646 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+13:13:25.646 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+13:13:25.690 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:13:26.336 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+13:13:26.354 [main] INFO  yxl.MainApplication - Started MainApplication in 2.121 seconds (JVM running for 2.905)
+13:14:10.466 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:14:12.915 [http-nio-8080-exec-1] INFO  yxl.UserAndTask.filter.CheckUserHandle - url:/users/logon;op:用户注册;type:用户操作
+13:14:19.411 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:14:19.685 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:14:39.093 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+13:14:39.106 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

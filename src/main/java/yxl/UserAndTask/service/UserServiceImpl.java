@@ -34,6 +34,7 @@ public class UserServiceImpl {
         user.setU_bag(0);
         user.setU_isProd(false);
         user.setU_vip(false);
+        user.setU_password(DigestUtils.md5DigestAsHex(user.getU_password().getBytes()));
         return util.insertUser(user) ? 0 : -1;
     }
 
@@ -46,7 +47,7 @@ public class UserServiceImpl {
         if (user.getU_name() != null)
             old.setU_name(user.getU_name());
         if (user.getU_password() != null)
-            old.setU_password(user.getU_password());
+            old.setU_password(DigestUtils.md5DigestAsHex(user.getU_password().getBytes()));
         boolean b = util.updateUser(old);
         return b ? 0 : -1;
     }

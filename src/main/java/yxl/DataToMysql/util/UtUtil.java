@@ -16,23 +16,31 @@ public class UtUtil {
     @Autowired
     private SelectU_t select;
 
-    public boolean containsUt(String utid){
+    public boolean containsUt(String utid) {
         return select.containsUt(utid);
     }
 
-    public Ut findutbyId(String utid){
+    public Ut findutbyId(String utid) {
         return select.findutbyId(utid);
     }
 
-    public List<Ut> findTasks(){
+    public List<Ut> findTasks() {
         return select.findTasks();
     }
 
-    public boolean insertut(Ut ut){
+    public boolean insertut(Ut ut) {
         return update.insertut(ut);
     }
 
-    public boolean updateState(String state,String utid){
+    public boolean updateState(String state, String utid) {
         return update.updateState(state, utid);
+    }
+
+    public boolean updateResult(int result, String utid) {
+        return update.updateResult(result, utid);
+    }
+
+    public List<Ut> findutbyTid(String tid) {
+        return select.findutbyTid(tid);
     }
 }

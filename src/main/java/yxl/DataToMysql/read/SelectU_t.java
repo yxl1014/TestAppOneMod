@@ -26,6 +26,11 @@ public class SelectU_t {
         return jdbcTemplate.queryForObject(sql, Ut.class, utid);
     }
 
+    public List<Ut> findutbyTid(String tid) {
+        String sql = "select * from u_ts where ut_tid=?";
+        return jdbcTemplate.queryForList(sql, Ut.class, tid);
+    }
+
     //查询所有任务
     public List<Ut> findTasks(){
         String sql="select * from u_ts";

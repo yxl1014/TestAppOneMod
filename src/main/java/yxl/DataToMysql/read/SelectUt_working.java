@@ -27,8 +27,14 @@ public class SelectUt_working {
     }
 
     //查询所有任务
-    public List<Ut_working> findTasks(){
-        String sql="select * from ut_working";
+    public List<Ut_working> findTasks() {
+        String sql = "select * from ut_working";
+        return jdbcTemplate.queryForList(sql, Ut_working.class);
+    }
+
+    //查询所有没有完成的任务
+    public List<Ut_working> findNookTasks() {
+        String sql = "select * from ut_working where utw_etime=null";
         return jdbcTemplate.queryForList(sql, Ut_working.class);
     }
 }

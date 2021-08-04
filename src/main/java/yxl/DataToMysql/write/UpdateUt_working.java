@@ -18,10 +18,10 @@ public class UpdateUt_working {
 
     //用户接受任务
     public boolean insertut(Ut_working utw){
-        String sql="insert ut_working(utw_utid,utw_stime) values(?,?)";
+        String sql="insert ut_working(utw_utid,utw_stime,utw_etime,utw_result) values(?,?,?,?)";
         int ok;
         try {
-            ok=jdbcTemplate.update(sql,utw.getUtw_utid(),utw.getUtw_stime());
+            ok=jdbcTemplate.update(sql,utw.getUtw_utid(),utw.getUtw_stime(),utw.getUtw_etime(),utw.getUtw_result());
         }catch (Exception ex){
             LogUtil.error(ex.toString());
             ok=0;

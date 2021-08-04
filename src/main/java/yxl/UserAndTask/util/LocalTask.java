@@ -11,7 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 
 @Component
-public class LocalTable {
+public class LocalTask {
     private final ConcurrentHashMap<String,Task> tasks=new ConcurrentHashMap<>();
 
     public Task addLocal(@NonNull Task task){

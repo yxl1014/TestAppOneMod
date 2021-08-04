@@ -27,11 +27,15 @@ public class UtwUtil {
         return select.containsUt(utid);
     }
 
-    public Ut_working findutbyId(String utid){
+    public Ut_working findutbyId(String utid) {
         return select.findutbyId(utid);
     }
 
-    public List<Ut_working> findTasks(){
+    public List<Ut_working> findTasks() {
         return select.findTasks();
+    }
+
+    public List<Ut_working> findNookTasks() {
+        return select.findNookTasks();
     }
 }
