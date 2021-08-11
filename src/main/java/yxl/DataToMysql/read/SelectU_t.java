@@ -1,6 +1,7 @@
 package yxl.DataToMysql.read;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import yxl.UserAndTask.entity.Ut;
@@ -23,7 +24,7 @@ public class SelectU_t {
     //查询Ut
     public Ut findutbyId(String utid) {
         String sql = "select * from u_ts where ut_id=?";
-        return jdbcTemplate.queryForObject(sql, Ut.class, utid);
+        return jdbcTemplate.queryForObject(sql, BeanPropertyRowMapper.newInstance(Ut.class), utid);
     }
 
     public List<Ut> findutbyTid(String tid) {

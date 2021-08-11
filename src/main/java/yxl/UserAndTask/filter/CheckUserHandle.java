@@ -23,6 +23,7 @@ public class CheckUserHandle implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String token = request.getHeader("token");
 
+
         if (!(handler instanceof HandlerMethod))
             return false;
 
@@ -36,7 +37,7 @@ public class CheckUserHandle implements HandlerInterceptor {
         }
 
         LogWeb log = method.getAnnotation(LogWeb.class);
-        LogUtil.info("url:" + log.url() + ";op:" + log.op() + ";type:" + log.type());
+        LogUtil.info("url:" + log.url() + "\t;op:" + log.op() + ";\ttype:" + log.type());
 
 
         if (!method.isAnnotationPresent(NoToken.class)) {//获取这个方法是否有这个注释

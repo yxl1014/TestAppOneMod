@@ -5,8 +5,6 @@ import org.springframework.stereotype.Component;
 import yxl.UserAndTask.entity.Task;
 
 import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
 import java.util.concurrent.ConcurrentHashMap;
 
 
@@ -14,8 +12,8 @@ import java.util.concurrent.ConcurrentHashMap;
 public class LocalTask {
     private final ConcurrentHashMap<String,Task> tasks=new ConcurrentHashMap<>();
 
-    public Task addLocal(@NonNull Task task){
-        return tasks.put(task.getT_id(),task);
+    public void addLocal(@NonNull Task task){
+        tasks.put(task.getT_id(), task);
     }
 
     public Task getLocal(@NonNull String tid){

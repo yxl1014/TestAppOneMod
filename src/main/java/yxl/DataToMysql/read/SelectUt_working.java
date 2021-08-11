@@ -1,6 +1,7 @@
 package yxl.DataToMysql.read;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import yxl.UserAndTask.entity.Ut_working;
@@ -23,7 +24,7 @@ public class SelectUt_working {
     //查询Ut_workig
     public Ut_working findutbyId(String utid) {
         String sql = "select * from ut_working where utw_utid=?";
-        return jdbcTemplate.queryForObject(sql, Ut_working.class, utid);
+        return jdbcTemplate.queryForObject(sql, BeanPropertyRowMapper.newInstance(Ut_working.class), utid);
     }
 
     //查询所有任务
@@ -33,8 +34,8 @@ public class SelectUt_working {
     }
 
     //查询所有没有完成的任务
-    public List<Ut_working> findNookTasks() {
-        String sql = "select * from ut_working where utw_etime=null";
-        return jdbcTemplate.queryForList(sql, Ut_working.class);
+    public List<Ut_working> findNookTasks(String utid) {
+        String sql = "select * from ut_working where utw_etime=null and utw_utid=?";
+        return jdbcTemplate.queryForList(sql, Ut_working.class, utid);
     }
 }

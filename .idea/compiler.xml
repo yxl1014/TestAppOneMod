@@ -10,5 +10,8 @@
         <module name="TestAppOneMod" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="TestAppClient" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

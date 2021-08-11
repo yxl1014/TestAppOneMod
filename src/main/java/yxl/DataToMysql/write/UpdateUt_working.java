@@ -30,11 +30,22 @@ public class UpdateUt_working {
     }
 
     //修改状态
-    public boolean updateState(String utid,int result){
-        String sql="update ut_working set utw_result=?,utw_etime=? where utw_utid=?";
+    public boolean updateState(int utwid,int result){
+        String sql="update ut_working set utw_result=utw_result+?,utw_etime=? where utw_id=?";
         int ok;
         try {
-            ok=jdbcTemplate.update(sql,result,new Timestamp(new Date().getTime()),utid);
+            ok=jdbcTemplate.update(sql,result,new Timestamp(new Date().getTime()),utwid);
+        }catch (Exception ex){
+            LogUtil.error(ex.toString());
+            ok=0;
+        }
+        return ok==1;
+    }
+    public boolean updateResultbyUtwid(int utwid,int result){
+        String sql="update ut_working set utw_result=utw_result+? where utw_id=? and utw_etime!=null ";
+        int ok;
+        try {
+            ok=jdbcTemplate.update(sql,result,utwid);
         }catch (Exception ex){
             LogUtil.error(ex.toString());
             ok=0;

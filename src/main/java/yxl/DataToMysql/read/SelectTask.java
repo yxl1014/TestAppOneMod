@@ -1,6 +1,7 @@
 package yxl.DataToMysql.read;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import yxl.UserAndTask.entity.Task;
@@ -23,7 +24,7 @@ public class SelectTask {
     //查询任务
     public Task findTaskbyId(String tid) {
         String sql = "select * from tasks where t_id=?";
-        return jdbcTemplate.queryForObject(sql, Task.class, tid);
+        return jdbcTemplate.queryForObject(sql, BeanPropertyRowMapper.newInstance(Task.class), tid);
     }
 
     //查询所有任务

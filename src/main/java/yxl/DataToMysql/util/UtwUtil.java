@@ -7,6 +7,7 @@ import yxl.DataToMysql.write.UpdateUt_working;
 import yxl.UserAndTask.entity.Ut_working;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class UtwUtil {
@@ -19,8 +20,17 @@ public class UtwUtil {
         return update.insertut(utw);
     }
 
-    public boolean updateState(String utid, int result) {
-        return update.updateState(utid, result);
+    public boolean updateState(int utwid, int result) {
+        return update.updateState(utwid, result);
+    }
+    public boolean updateResultbyUtwid(int utwid,int result){
+        return update.updateResultbyUtwid(utwid, result);
+    }
+
+    public void pushData(Map<Integer,Integer> maps){
+        for (Integer id: maps.keySet()){
+            update.updateResultbyUtwid(id, maps.get(id));
+        }
     }
 
     public boolean containsUt(String utid) {
@@ -35,7 +45,7 @@ public class UtwUtil {
         return select.findTasks();
     }
 
-    public List<Ut_working> findNookTasks() {
-        return select.findNookTasks();
+    public List<Ut_working> findNookTasks(String utid) {
+        return select.findNookTasks(utid);
     }
 }
