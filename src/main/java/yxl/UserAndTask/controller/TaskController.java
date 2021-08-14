@@ -11,6 +11,7 @@ import yxl.UserAndTask.util.ErrorSwitch;
 import yxl.UserAndTask.util.GsonUtil;
 
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @RestController
 @RequestMapping(value = "/tasks")
@@ -68,24 +69,25 @@ public class TaskController {
     @ResponseBody
     @LogWeb(url = "/tasks/cons/getTask", op = "接受任务", type = "任务操作")
     public String cgetTask(@RequestBody String tid) {
-        Integer ok = new Integer(-1);
+        AtomicInteger ok = new AtomicInteger(-1);
         Task t = utService.getTask(tid, ok);
-        return GsonUtil.toJson(new Result(ok == 0 ? GsonUtil.toJson(t) : ErrorSwitch.getValue(ok), null));
+        return GsonUtil.toJson(new Result(ok.get() == 0 ? GsonUtil.toJson(t) : ErrorSwitch.getValue(ok.get()), null));
     }
 
 
     @PostMapping("/cons/startTask")
     @ResponseBody
     @LogWeb(url = "/tasks/cons/startTask", op = "消费者开始任务", type = "任务操作")
-    public String cstartTask(@RequestBody String utid) {
-        int ok=utService.startTask(utid);
-        return null;
+    public String cstartTask(@RequestBody String tid) {
+        int ok = utService.startTask(tid);
+        return GsonUtil.toJson(new Result(ErrorSwitch.getValue(ok), null));
     }
 
     @PostMapping("/cons/stopTask")
     @ResponseBody
     @LogWeb(url = "/tasks/cons/stopTask", op = "消费者结束任务", type = "任务操作")
     public String cstopTask(@RequestBody String tid) {
-        return null;
+        int ok = utService.stopTask(tid);
+        return GsonUtil.toJson(new Result(ErrorSwitch.getValue(ok), null));
     }
 }

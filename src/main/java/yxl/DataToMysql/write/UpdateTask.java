@@ -19,7 +19,7 @@ public class UpdateTask {
                 "values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
         int ok;
         try {
-            ok=jdbcTemplate.update(sql,t.getT_id(),t, t.getT_name(),t.getT_type(),t.getT_uid(),t.getT_serverip(),t.getT_serverport(),
+            ok=jdbcTemplate.update(sql,t.getT_id(), t.getT_name(),t.getT_type(),t.getT_uid(),t.getT_serverip(),t.getT_serverport(),
                     t.getT_cost(),t.getT_protocol(),t.getT_context(),t.getT_target(),t.getT_colonymsg(),t.getT_state(),t.getT_stime());
         }catch (Exception ex){
             LogUtil.error(ex.toString());

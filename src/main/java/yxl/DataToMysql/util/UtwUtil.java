@@ -33,12 +33,12 @@ public class UtwUtil {
         }
     }
 
-    public boolean containsUt(String utid) {
-        return select.containsUt(utid);
+    public boolean containsUtw(String utid) {
+        return select.containsUtw(utid);
     }
 
-    public Ut_working findutbyId(String utid) {
-        return select.findutbyId(utid);
+    public Ut_working findutwbyId(String id) {
+        return select.findutwbyId(id);
     }
 
     public List<Ut_working> findTasks() {

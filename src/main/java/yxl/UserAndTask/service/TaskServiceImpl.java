@@ -57,7 +57,7 @@ public class TaskServiceImpl {
         User user = TlUserUtil.getThreadLocal();
         task.setT_id(IdsUtil.getTid(task.getT_type(), user.getU_id().substring(15)));
         task.setT_uid(user.getU_id());
-        task.setT_cost(0);
+        //task.setT_cost(0);
         task.setT_state("准备中");
         task.setT_stime(new Timestamp(new Date().getTime()));
         if(!util.insertTask(task)){

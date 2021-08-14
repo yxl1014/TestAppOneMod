@@ -33,8 +33,13 @@ public class SelectU_t {
     }
 
     //查询所有任务
-    public List<Ut> findTasks(){
-        String sql="select * from u_ts";
+    public List<Ut> findTasks() {
+        String sql = "select * from u_ts";
         return jdbcTemplate.queryForList(sql, Ut.class);
+    }
+
+    public Ut findutbyTidAndUid(String tid, String u_id) {
+        String sql = "select * from u_ts where ut_tid=? and ut_uid=?";
+        return jdbcTemplate.queryForObject(sql, BeanPropertyRowMapper.newInstance(Ut.class), tid, u_id);
     }
 }

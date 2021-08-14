@@ -48,6 +48,7 @@ public class CheckUserHandle implements HandlerInterceptor {
             }
             // 获取 token 中的 user
             //throw new RuntimeException("用户不存在，请重新登录");
+            TlUserUtil.setThreadLocal(user);
             return user != null;
         }
         TlUserUtil.setThreadLocal(user);

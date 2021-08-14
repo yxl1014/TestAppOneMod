@@ -138,21 +138,27 @@
 
 
         <!-- https://mvnrepository.com/artifact/org.springframework.kafka/spring-kafka -->
-        <dependency>
+<!--        <dependency>
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
             <version>2.3.7.RELEASE</version>
-<!--            <exclusions>
+            <exclusions>
                 <exclusion>
                     <artifactId>spring-context</artifactId>
                     <groupId>org.springframework</groupId>
                 </exclusion>
-                &lt;!&ndash;     <exclusion>
-                      <artifactId>spring-tx</artifactId>
-                      <groupId>org.springframework</groupId>
-                    </exclusion>&ndash;&gt;
-            </exclusions>-->
-        </dependency>
+            </exclusions>
+            &lt;!&ndash;            <exclusions>
+                            <exclusion>
+                                <artifactId>spring-context</artifactId>
+                                <groupId>org.springframework</groupId>
+                            </exclusion>
+                            &lt;!&ndash;     <exclusion>
+                                  <artifactId>spring-tx</artifactId>
+                                  <groupId>org.springframework</groupId>
+                                </exclusion>&ndash;&gt;
+                        </exclusions>&ndash;&gt;
+        </dependency>-->
 
     </dependencies>
 

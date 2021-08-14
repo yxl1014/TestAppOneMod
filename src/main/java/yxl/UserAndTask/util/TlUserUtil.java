@@ -4,7 +4,7 @@ package yxl.UserAndTask.util;
 import yxl.UserAndTask.entity.User;
 
 public class TlUserUtil {
-    private static ThreadLocal<User> threadLocal=new ThreadLocal<>();
+    private static final ThreadLocal<User> threadLocal=new ThreadLocal<>();
 
     public static void setThreadLocal(User data){
         threadLocal.set(data);

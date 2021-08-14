@@ -17,7 +17,7 @@ public class UpdateUt_working {
     private JdbcTemplate jdbcTemplate;
 
     //用户接受任务
-    public boolean insertut(Ut_working utw){
+    public boolean insertut(Ut_working utw){//开始任务
         String sql="insert ut_working(utw_utid,utw_stime,utw_etime,utw_result) values(?,?,?,?)";
         int ok;
         try {
@@ -30,7 +30,7 @@ public class UpdateUt_working {
     }
 
     //修改状态
-    public boolean updateState(int utwid,int result){
+    public boolean updateState(int utwid,int result){//结束任务
         String sql="update ut_working set utw_result=utw_result+?,utw_etime=? where utw_id=?";
         int ok;
         try {
@@ -41,7 +41,7 @@ public class UpdateUt_working {
         }
         return ok==1;
     }
-    public boolean updateResultbyUtwid(int utwid,int result){
+    public boolean updateResultbyUtwid(int utwid,int result){//修改数量
         String sql="update ut_working set utw_result=utw_result+? where utw_id=? and utw_etime!=null ";
         int ok;
         try {

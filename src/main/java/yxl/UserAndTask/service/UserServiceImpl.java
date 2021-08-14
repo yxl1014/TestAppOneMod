@@ -58,6 +58,7 @@ public class UserServiceImpl {
         if (!ok1) {
             LogUtil.error("user表修改失败");
         }
+        producer.setP_uid(user.getU_id());
         boolean ok2 = util.insertProducer(producer);
         if (!ok2) {
             LogUtil.error("producer插入失败");

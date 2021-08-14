@@ -22,6 +22,9 @@ public class ErrorSwitch {
             case 4:
                 msg = "任务还不可以接受";
                 break;
+            case 5:
+                msg = "你没有接受该任务";
+                break;
             default:
                 msg = "服务器遇到未预测的错误！";
         }
