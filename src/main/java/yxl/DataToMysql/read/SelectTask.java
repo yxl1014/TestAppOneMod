@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 import yxl.UserAndTask.entity.Task;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -29,7 +30,12 @@ public class SelectTask {
 
     //查询所有任务
     public List<Task> findTasks(){
-        String sql="select * from tasks";
-        return jdbcTemplate.queryForList(sql,Task.class);
+        String sql="select t_id from tasks";
+        List<String> lint=jdbcTemplate.queryForList(sql, String.class);
+        List<Task> list=new ArrayList<>();
+        for (String utid:lint){
+            list.add(findTaskbyId(utid));
+        }
+        return list;
     }
 }

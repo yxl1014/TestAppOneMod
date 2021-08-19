@@ -1,10 +1,73 @@
-18:04:26.489 [main] INFO  yxl.MainApplication - Starting MainApplication using Java 1.8.0_251 on yxl-RCBZ with PID 23157 (/home/yxl/IdeaProjects/TestAppOneMod/target/classes started by yxl in /home/yxl/IdeaProjects/TestAppOneMod)
-18:04:26.494 [main] INFO  yxl.MainApplication - The following profiles are active: 8080
-18:04:27.227 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-18:04:27.228 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-18:04:27.228 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
-18:04:27.264 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-18:04:27.882 [main] INFO  org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+17:02:27.566 [main] INFO  yxl.MainApplication - Starting MainApplication using Java 1.8.0_251 on yxl-RCBZ with PID 68217 (/home/yxl/IdeaProjects/TestAppOneMod/target/classes started by yxl in /home/yxl/IdeaProjects/TestAppOneMod)
+17:02:27.572 [main] INFO  yxl.MainApplication - The following profiles are active: 8080
+17:02:28.246 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+17:02:28.246 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+17:02:28.246 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+17:02:28.290 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:02:28.904 [main] INFO  org.apache.kafka.clients.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [127.0.0.1:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+17:02:28.932 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 2.7.0
+17:02:28.932 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 448719dc99a19793
+17:02:28.932 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1629363748930
+17:02:29.088 [kafka-admin-client-thread | adminclient-1] INFO  org.apache.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+17:02:29.091 [kafka-admin-client-thread | adminclient-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+17:02:29.091 [kafka-admin-client-thread | adminclient-1] INFO  org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+17:02:29.091 [kafka-admin-client-thread | adminclient-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+17:02:29.102 [main] INFO  org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 1000
 	auto.offset.reset = latest
@@ -83,26 +146,172 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-18:04:27.918 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 2.7.1
-18:04:27.919 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 61dbce85d0d41457
-18:04:27.919 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1628589867917
-18:04:27.920 [main] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Subscribed to topic(s): topic1
-18:04:27.926 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-18:04:27.941 [main] INFO  yxl.MainApplication - Started MainApplication in 1.759 seconds (JVM running for 2.241)
-18:04:28.073 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Cluster ID: QQNQ_znSSwyqmOxcS6wXrg
-18:04:28.075 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Discovered group coordinator yxl-RCBZ:9092 (id: 2147483647 rack: null)
-18:04:28.076 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] (Re-)joining group
-18:04:28.085 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] (Re-)joining group
-18:04:28.088 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Successfully joined group with generation Generation{generationId=11, memberId='consumer-ResultGroup-1-e7b7d52f-48e5-4e1e-80d4-862ead0284cd', protocol='range'}
-18:04:28.090 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Finished assignment for group at generation 11: {consumer-ResultGroup-1-e7b7d52f-48e5-4e1e-80d4-862ead0284cd=Assignment(partitions=[topic1-0])}
-18:04:28.096 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Successfully synced group in generation Generation{generationId=11, memberId='consumer-ResultGroup-1-e7b7d52f-48e5-4e1e-80d4-862ead0284cd', protocol='range'}
-18:04:28.097 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Notifying assignor about the new Assignment(partitions=[topic1-0])
-18:04:28.099 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Adding newly assigned partitions: topic1-0
-18:04:28.105 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Setting offset for partition topic1-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[yxl-RCBZ:9092 (id: 0 rack: null)], epoch=0}}
-18:21:48.820 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Revoke previously assigned partitions topic1-0
-18:21:48.823 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Member consumer-ResultGroup-1-e7b7d52f-48e5-4e1e-80d4-862ead0284cd sending LeaveGroup request to coordinator yxl-RCBZ:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
-18:21:48.826 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Unsubscribed all topics or patterns and assigned partitions
-18:21:48.829 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
-18:21:48.829 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
-18:21:48.830 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
-18:21:48.838 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-ResultGroup-1 unregistered
+17:02:29.143 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 2.7.0
+17:02:29.143 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 448719dc99a19793
+17:02:29.143 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1629363749143
+17:02:29.145 [main] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Subscribed to topic(s): topic2
+17:02:29.154 [main] INFO  org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [127.0.0.1:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-ResultGroup-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = ResultGroup
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 50
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+17:02:29.159 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 2.7.0
+17:02:29.159 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 448719dc99a19793
+17:02:29.159 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1629363749159
+17:02:29.159 [main] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Subscribed to topic(s): topic1
+17:02:29.160 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+17:02:29.166 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Cluster ID: oqsqtaz_QQiPei1nHcdc8g
+17:02:29.166 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Cluster ID: oqsqtaz_QQiPei1nHcdc8g
+17:02:29.167 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Discovered group coordinator yxl-RCBZ:9092 (id: 2147483647 rack: null)
+17:02:29.167 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Discovered group coordinator yxl-RCBZ:9092 (id: 2147483647 rack: null)
+17:02:29.168 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] (Re-)joining group
+17:02:29.168 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] (Re-)joining group
+17:02:29.179 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] (Re-)joining group
+17:02:29.179 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] (Re-)joining group
+17:02:29.289 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+17:02:29.289 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+17:02:29.299 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+17:02:29.300 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+17:02:35.404 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Successfully joined group with generation Generation{generationId=10, memberId='consumer-ResultGroup-2-78e0b795-92cb-47c1-88eb-82146a0086bb', protocol='range'}
+17:02:35.404 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Successfully joined group with generation Generation{generationId=10, memberId='consumer-ResultGroup-1-5d69f635-a94c-4eba-9b64-37d00e4437fc', protocol='range'}
+17:02:35.426 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Finished assignment for group at generation 10: {consumer-ResultGroup-1-5d69f635-a94c-4eba-9b64-37d00e4437fc=Assignment(partitions=[topic2-0]), consumer-ResultGroup-2-78e0b795-92cb-47c1-88eb-82146a0086bb=Assignment(partitions=[topic1-0])}
+17:02:35.440 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Successfully synced group in generation Generation{generationId=10, memberId='consumer-ResultGroup-1-5d69f635-a94c-4eba-9b64-37d00e4437fc', protocol='range'}
+17:02:35.440 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Successfully synced group in generation Generation{generationId=10, memberId='consumer-ResultGroup-2-78e0b795-92cb-47c1-88eb-82146a0086bb', protocol='range'}
+17:02:35.441 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Notifying assignor about the new Assignment(partitions=[topic2-0])
+17:02:35.441 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Notifying assignor about the new Assignment(partitions=[topic1-0])
+17:02:35.452 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Adding newly assigned partitions: topic1-0
+17:02:35.453 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Adding newly assigned partitions: topic2-0
+17:02:35.467 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Setting offset for partition topic2-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[yxl-RCBZ:9092 (id: 0 rack: null)], epoch=0}}
+17:02:35.467 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Setting offset for partition topic1-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[yxl-RCBZ:9092 (id: 0 rack: null)], epoch=0}}
+17:03:01.026 [kafka-coordinator-heartbeat-thread | ResultGroup] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Group coordinator yxl-RCBZ:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable.isDisconnected: true. Rediscovery will be attempted.
+17:03:01.025 [kafka-coordinator-heartbeat-thread | ResultGroup] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Group coordinator yxl-RCBZ:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable.isDisconnected: true. Rediscovery will be attempted.
+17:03:01.026 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.FetchSessionHandler - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Error sending fetch request (sessionId=479917339, epoch=50) to node 0:
+org.apache.kafka.common.errors.DisconnectException: null
+17:03:01.026 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.FetchSessionHandler - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Error sending fetch request (sessionId=843160223, epoch=50) to node 0:
+org.apache.kafka.common.errors.DisconnectException: null
+17:03:01.127 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:01.127 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:01.278 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:01.278 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:01.479 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:01.530 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:01.983 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:02.033 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:02.888 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:02.939 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:03.743 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:04.095 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:04.617 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:05.101 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:05.724 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:06.058 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:06.680 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:07.266 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:07.786 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:08.472 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:08.641 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:09.467 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:09.517 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:10.522 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:10.623 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:11.527 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:11.830 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:12.332 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:12.885 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:13.236 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:13.890 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:14.166 [kafka-coordinator-heartbeat-thread | ResultGroup] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:14.167 [kafka-coordinator-heartbeat-thread | ResultGroup] INFO  org.apache.kafka.clients.FetchSessionHandler - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Error sending fetch request (sessionId=479917339, epoch=INITIAL) to node 0:
+org.apache.kafka.common.errors.DisconnectException: null
+17:03:14.820 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:15.222 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:16.025 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:16.277 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:17.081 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:17.332 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:17.985 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:18.287 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:19.038 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:19.319 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:20.019 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:20.475 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:20.973 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:21.578 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:22.078 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:22.481 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:23.282 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.
+17:03:23.434 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Connection to node 0 (yxl-RCBZ/127.0.1.1:9092) could not be established. Broker may not be available.

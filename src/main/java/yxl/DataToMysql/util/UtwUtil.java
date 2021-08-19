@@ -37,7 +37,7 @@ public class UtwUtil {
         return select.containsUtw(utid);
     }
 
-    public Ut_working findutwbyId(String id) {
+    public Ut_working findutwbyId(int id) {
         return select.findutwbyId(id);
     }
 
