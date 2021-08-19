@@ -44,13 +44,21 @@ public class SelectUt_working {
     //查询所有没有完成的任务
     public List<Ut_working> findNookTasks(String utid) {
         //String sql = "select utw_id,utw_utid,utw_stime,utw_etime,utw_result from ut_working where utw_etime is null and utw_utid=?";
-        String sql = "select utw_id from ut_working where utw_etime is null and utw_utid=?";
-        List<Integer> listint=jdbcTemplate.queryForList(sql, Integer.class);
+        String sql = "select utw_id from ut_working where utw_utid=?";
+        List<Integer> listint=jdbcTemplate.queryForList(sql, Integer.class,utid);
 
         List<Ut_working> list=new ArrayList<>();
         for (Integer utwid:listint){
             list.add(findutwbyId(utwid));
         }
-        return list;
+
+
+        List<Ut_working> l=new ArrayList<>();
+        for (Ut_working utw:list){
+            if (utw.getUtw_etime()==null){
+                l.add(utw);
+            }
+        }
+        return l;
     }
 }
