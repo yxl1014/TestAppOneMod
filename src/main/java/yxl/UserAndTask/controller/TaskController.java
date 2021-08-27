@@ -64,6 +64,14 @@ public class TaskController {
         return GsonUtil.toJson(new Result(ErrorSwitch.getValue(ok), null));
     }
 
+    @PostMapping("/prod/getMyTask")
+    @ResponseBody
+    @LogWeb(url = "/tasks/prod/getMyTask", op = "生产者获取所有发布的任务", type = "任务操作")
+    public String getUts(){
+        List<Task> tasks = taskService.getAllbyUid();
+        return GsonUtil.toJson(new Result(GsonUtil.toJson(tasks), null));
+    }
+
 
     @PostMapping("/cons/getTask")
     @ResponseBody

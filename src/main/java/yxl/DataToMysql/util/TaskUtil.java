@@ -28,6 +28,10 @@ public class TaskUtil {
         return select.findTasks();
     }
 
+    public List<Task> findTasksbyUid(String uid){
+        return select.findTasksbyUid(uid);
+    }
+
     public boolean insertTask(Task t){
         return update.insertTask(t);
     }

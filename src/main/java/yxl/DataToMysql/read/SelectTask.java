@@ -38,4 +38,15 @@ public class SelectTask {
         }
         return list;
     }
+
+    //查询某位用户发布的所有任务
+    public List<Task> findTasksbyUid(String uid){
+        String sql="select t_id from tasks where t_uid=?";
+        List<String> lint=jdbcTemplate.queryForList(sql, String.class,uid);
+        List<Task> list=new ArrayList<>();
+        for (String utid:lint){
+            list.add(findTaskbyId(utid));
+        }
+        return list;
+    }
 }

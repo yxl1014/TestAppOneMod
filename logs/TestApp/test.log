@@ -1,10 +1,10 @@
-17:41:54.911 [main] INFO  yxl.MainApplication - Starting MainApplication using Java 1.8.0_251 on yxl-RCBZ with PID 79669 (/home/yxl/IdeaProjects/TestAppOneMod/target/classes started by yxl in /home/yxl/IdeaProjects/TestAppOneMod)
-17:41:54.917 [main] INFO  yxl.MainApplication - The following profiles are active: 8080
-17:41:55.635 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-17:41:55.636 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-17:41:55.636 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
-17:41:55.685 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-17:41:56.307 [main] INFO  org.apache.kafka.clients.admin.AdminClientConfig - AdminClientConfig values: 
+11:20:57.242 [main] INFO  yxl.MainApplication - Starting MainApplication using Java 1.8.0_251 on yxl-RCBZ with PID 6285 (/home/yxl/IdeaProjects/TestAppOneMod/target/classes started by yxl in /home/yxl/IdeaProjects/TestAppOneMod)
+11:20:57.280 [main] INFO  yxl.MainApplication - The following profiles are active: 8080
+11:20:58.103 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+11:20:58.103 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+11:20:58.103 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+11:20:58.142 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11:20:58.729 [main] INFO  org.apache.kafka.clients.admin.AdminClientConfig - AdminClientConfig values: 
 	bootstrap.servers = [127.0.0.1:9092]
 	client.dns.lookup = use_all_dns_ips
 	client.id = 
@@ -60,14 +60,14 @@
 	ssl.truststore.password = null
 	ssl.truststore.type = JKS
 
-17:41:56.334 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 2.7.0
-17:41:56.335 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 448719dc99a19793
-17:41:56.335 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1629366116333
-17:41:56.506 [kafka-admin-client-thread | adminclient-1] INFO  org.apache.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
-17:41:56.510 [kafka-admin-client-thread | adminclient-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
-17:41:56.510 [kafka-admin-client-thread | adminclient-1] INFO  org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
-17:41:56.510 [kafka-admin-client-thread | adminclient-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
-17:41:56.523 [main] INFO  org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+11:20:58.752 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 2.7.0
+11:20:58.752 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 448719dc99a19793
+11:20:58.752 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1630034458751
+11:20:59.064 [kafka-admin-client-thread | adminclient-1] INFO  org.apache.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+11:20:59.068 [kafka-admin-client-thread | adminclient-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+11:20:59.068 [kafka-admin-client-thread | adminclient-1] INFO  org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+11:20:59.068 [kafka-admin-client-thread | adminclient-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+11:20:59.078 [main] INFO  org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 1000
 	auto.offset.reset = latest
@@ -146,11 +146,11 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-17:41:56.544 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 2.7.0
-17:41:56.544 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 448719dc99a19793
-17:41:56.544 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1629366116543
-17:41:56.545 [main] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Subscribed to topic(s): topic2
-17:41:56.552 [main] INFO  org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+11:20:59.095 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 2.7.0
+11:20:59.095 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 448719dc99a19793
+11:20:59.095 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1630034459095
+11:20:59.097 [main] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Subscribed to topic(s): topic1
+11:20:59.104 [main] INFO  org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 1000
 	auto.offset.reset = latest
@@ -229,32 +229,45 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-17:41:56.557 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 2.7.0
-17:41:56.557 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 448719dc99a19793
-17:41:56.557 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1629366116557
-17:41:56.558 [main] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Subscribed to topic(s): topic1
-17:41:56.558 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-17:41:56.561 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Cluster ID: oqsqtaz_QQiPei1nHcdc8g
-17:41:56.567 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Discovered group coordinator yxl-RCBZ:9092 (id: 2147483647 rack: null)
-17:41:56.567 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Cluster ID: oqsqtaz_QQiPei1nHcdc8g
-17:41:56.567 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Discovered group coordinator yxl-RCBZ:9092 (id: 2147483647 rack: null)
-17:41:56.568 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] (Re-)joining group
-17:41:56.568 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] (Re-)joining group
-17:41:56.577 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] (Re-)joining group
-17:41:56.577 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] (Re-)joining group
-17:41:56.577 [main] INFO  yxl.MainApplication - Started MainApplication in 1.984 seconds (JVM running for 2.456)
-17:41:56.578 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Successfully joined group with generation Generation{generationId=28, memberId='consumer-ResultGroup-1-defc4822-9b16-4c45-ae61-7abbdd5d16e0', protocol='range'}
-17:41:56.578 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Successfully joined group with generation Generation{generationId=28, memberId='consumer-ResultGroup-2-12118a82-9559-4e3b-bb76-7362161b8b08', protocol='range'}
-17:41:56.582 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Finished assignment for group at generation 28: {consumer-ResultGroup-1-defc4822-9b16-4c45-ae61-7abbdd5d16e0=Assignment(partitions=[topic2-0]), consumer-ResultGroup-2-12118a82-9559-4e3b-bb76-7362161b8b08=Assignment(partitions=[topic1-0])}
-17:41:56.585 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Successfully synced group in generation Generation{generationId=28, memberId='consumer-ResultGroup-1-defc4822-9b16-4c45-ae61-7abbdd5d16e0', protocol='range'}
-17:41:56.585 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Successfully synced group in generation Generation{generationId=28, memberId='consumer-ResultGroup-2-12118a82-9559-4e3b-bb76-7362161b8b08', protocol='range'}
-17:41:56.585 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Notifying assignor about the new Assignment(partitions=[topic1-0])
-17:41:56.585 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Notifying assignor about the new Assignment(partitions=[topic2-0])
-17:41:56.587 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Adding newly assigned partitions: topic1-0
-17:41:56.587 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Adding newly assigned partitions: topic2-0
-17:41:56.593 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Setting offset for partition topic2-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[yxl-RCBZ:9092 (id: 0 rack: null)], epoch=0}}
-17:41:56.593 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Setting offset for partition topic1-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[yxl-RCBZ:9092 (id: 0 rack: null)], epoch=0}}
-17:42:07.481 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-17:42:10.068 [http-nio-8080-exec-1] INFO  yxl.UserAndTask.filter.CheckUserHandle - url:/tasks/cons/stopTask	;op:消费者结束任务;	type:任务操作
-17:42:12.801 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-17:42:12.937 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:20:59.109 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 2.7.0
+11:20:59.109 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 448719dc99a19793
+11:20:59.109 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1630034459109
+11:20:59.109 [main] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Subscribed to topic(s): topic2
+11:20:59.110 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+11:20:59.119 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Cluster ID: Aif-J7chQGi2NvyLSduKKQ
+11:20:59.127 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Error while fetching metadata with correlation id 2 : {topic2=LEADER_NOT_AVAILABLE}
+11:20:59.128 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Cluster ID: Aif-J7chQGi2NvyLSduKKQ
+11:20:59.129 [main] INFO  yxl.MainApplication - Started MainApplication in 2.245 seconds (JVM running for 2.934)
+11:20:59.533 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Discovered group coordinator yxl-RCBZ:9092 (id: 2147483647 rack: null)
+11:20:59.537 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] (Re-)joining group
+11:20:59.542 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Discovered group coordinator yxl-RCBZ:9092 (id: 2147483647 rack: null)
+11:20:59.544 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] (Re-)joining group
+11:20:59.601 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] (Re-)joining group
+11:20:59.601 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] (Re-)joining group
+11:20:59.618 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Successfully joined group with generation Generation{generationId=1, memberId='consumer-ResultGroup-2-a0c726e5-f786-4ac6-a3c0-5a6cae055de4', protocol='range'}
+11:20:59.618 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Successfully joined group with generation Generation{generationId=1, memberId='consumer-ResultGroup-1-5d905bb2-0560-4006-8514-ab7f038f6919', protocol='range'}
+11:20:59.623 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Finished assignment for group at generation 1: {consumer-ResultGroup-1-5d905bb2-0560-4006-8514-ab7f038f6919=Assignment(partitions=[topic1-0]), consumer-ResultGroup-2-a0c726e5-f786-4ac6-a3c0-5a6cae055de4=Assignment(partitions=[topic2-0])}
+11:20:59.700 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Successfully synced group in generation Generation{generationId=1, memberId='consumer-ResultGroup-1-5d905bb2-0560-4006-8514-ab7f038f6919', protocol='range'}
+11:20:59.700 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Successfully synced group in generation Generation{generationId=1, memberId='consumer-ResultGroup-2-a0c726e5-f786-4ac6-a3c0-5a6cae055de4', protocol='range'}
+11:20:59.701 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Notifying assignor about the new Assignment(partitions=[topic1-0])
+11:20:59.701 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Notifying assignor about the new Assignment(partitions=[topic2-0])
+11:20:59.702 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Adding newly assigned partitions: topic1-0
+11:20:59.702 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Adding newly assigned partitions: topic2-0
+11:20:59.711 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Found no committed offset for partition topic1-0
+11:20:59.711 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Found no committed offset for partition topic2-0
+11:20:59.720 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Resetting offset for partition topic1-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[yxl-RCBZ:9092 (id: 0 rack: null)], epoch=0}}.
+11:20:59.720 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Resetting offset for partition topic2-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[yxl-RCBZ:9092 (id: 0 rack: null)], epoch=0}}.
+11:59:20.088 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Revoke previously assigned partitions topic1-0
+11:59:20.088 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Revoke previously assigned partitions topic2-0
+11:59:20.089 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Member consumer-ResultGroup-2-a0c726e5-f786-4ac6-a3c0-5a6cae055de4 sending LeaveGroup request to coordinator yxl-RCBZ:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+11:59:20.089 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Member consumer-ResultGroup-1-5d905bb2-0560-4006-8514-ab7f038f6919 sending LeaveGroup request to coordinator yxl-RCBZ:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+11:59:20.090 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-ResultGroup-2, groupId=ResultGroup] Unsubscribed all topics or patterns and assigned partitions
+11:59:20.090 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-ResultGroup-1, groupId=ResultGroup] Unsubscribed all topics or patterns and assigned partitions
+11:59:20.095 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+11:59:20.095 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+11:59:20.095 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+11:59:20.095 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+11:59:20.095 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+11:59:20.095 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+11:59:20.097 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-ResultGroup-1 unregistered
+11:59:20.098 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-ResultGroup-2 unregistered

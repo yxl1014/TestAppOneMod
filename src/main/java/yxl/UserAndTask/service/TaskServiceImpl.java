@@ -53,6 +53,16 @@ public class TaskServiceImpl {
         return tasks;
     }
 
+    public List<Task> getAllbyUid(){
+        User user=TlUserUtil.getThreadLocal();
+        List<Task> tasks=util.findTasksbyUid(user.getU_id());
+        localTable.addLocal(tasks);
+        for(Task t:tasks){
+            redisUtil.setex(t.getT_name(),t, 60 * 60);
+        }
+        return tasks;
+    }
+
     public Task maketask(@NonNull Task task) {
         User user = TlUserUtil.getThreadLocal();
         task.setT_id(IdsUtil.getTid(task.getT_type(), user.getU_id().substring(15)));
