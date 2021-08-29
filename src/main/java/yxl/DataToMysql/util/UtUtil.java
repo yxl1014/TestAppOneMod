@@ -47,4 +47,8 @@ public class UtUtil {
     public Ut findutbyTidAndUid(String tid, String u_id) {
         return select.findutbyTidAndUid(tid,u_id);
     }
+
+    public List<Ut> findutbyUid(String uid) {
+        return select.findutbyUid(uid);
+    }
 }

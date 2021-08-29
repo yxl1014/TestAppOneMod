@@ -15,6 +15,7 @@ import yxl.UserAndTask.util.*;
 
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -118,8 +119,8 @@ public class UtServiceImpl {
 
         User u = TlUserUtil.getThreadLocal();
 
-        Ut ut=uts.findutbyTidAndUid(tid,u.getU_id());
-        if (ut==null){//没有接受该任务
+        Ut ut = uts.findutbyTidAndUid(tid, u.getU_id());
+        if (ut == null) {//没有接受该任务
             return 5;
         }
 
@@ -153,18 +154,28 @@ public class UtServiceImpl {
 
         User u = TlUserUtil.getThreadLocal();
 
-        Ut ut=uts.findutbyTidAndUid(tid,u.getU_id());
-        if (ut==null){//没有接受该任务
+        Ut ut = uts.findutbyTidAndUid(tid, u.getU_id());
+        if (ut == null) {//没有接受该任务
             return 5;
         }
 
-        List<Ut_working> utws=utw.findNookTasks(ut.getUt_id());
-        for (Ut_working w:utws){
-            utw.updateState(w.getUtw_id(),0);
+        List<Ut_working> utws = utw.findNookTasks(ut.getUt_id());
+        for (Ut_working w : utws) {
+            utw.updateState(w.getUtw_id(), 0);
         }
 
         data.pushData();
 
         return 0;
+    }
+
+    public List<Task> getcons_Tasks() {
+        List<Task> tasks = new ArrayList<>();
+        String uid = TlUserUtil.getThreadLocal().getU_id();
+        List<Ut> utts = uts.findutbyUid(uid);
+        for (Ut ut : utts) {
+            tasks.add(taskUtil.findTaskbyId(ut.getUt_tid()));
+        }
+        return tasks;
     }
 }

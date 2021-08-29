@@ -53,4 +53,14 @@ public class SelectU_t {
         String sql = "select * from u_ts where ut_tid=? and ut_uid=?";
         return jdbcTemplate.queryForObject(sql, BeanPropertyRowMapper.newInstance(Ut.class), tid, u_id);
     }
+
+    public List<Ut> findutbyUid(String uid) {
+        String sql = "select ut_id from u_ts where ut_uid=?";
+        List<String> lint=jdbcTemplate.queryForList(sql, String.class, uid);
+        List<Ut> list=new ArrayList<>();
+        for (String utid:lint){
+            list.add(findutbyId(utid));
+        }
+        return list;
+    }
 }
