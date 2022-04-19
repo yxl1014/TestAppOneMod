@@ -2,8 +2,10 @@ package yxl.DataToMysql.util;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import yxl.DataToMysql.read.SelectUt_working;
 import yxl.DataToMysql.write.UpdateUt_working;
+import yxl.UserAndTask.entity.T_result;
 import yxl.UserAndTask.entity.Ut_working;
 
 import java.util.List;
@@ -20,15 +22,22 @@ public class UtwUtil {
         return update.insertut(utw);
     }
 
+    public boolean inserttr(T_result t) {
+        return update.inserttr(t);
+    }
+
     public boolean updateState(int utwid, int result) {
         return update.updateState(utwid, result);
     }
-    public boolean updateResultbyUtwid(int utwid,int result){
+
+    public boolean updateResultbyUtwid(int utwid, int result) {
         return update.updateResultbyUtwid(utwid, result);
     }
 
-    public void pushData(Map<Integer,Integer> maps){
-        for (Integer id: maps.keySet()){
+    @Transactional//回滚
+    public void pushData(Map<Integer, Integer> maps) {
+
+        for (Integer id : maps.keySet()) {
             update.updateResultbyUtwid(id, maps.get(id));
         }
     }
@@ -39,6 +48,10 @@ public class UtwUtil {
 
     public Ut_working findutwbyId(int id) {
         return select.findutwbyId(id);
+    }
+
+    public Ut_working findutwbyNew(Ut_working utw) {
+        return select.findutwbyNew(utw);
     }
 
     public List<Ut_working> findTasks() {

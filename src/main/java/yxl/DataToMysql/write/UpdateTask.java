@@ -15,11 +15,11 @@ public class UpdateTask {
 
     //新建任务
     public boolean insertTask(Task t){
-        String sql="insert into tasks(t_id,t_name,t_type,t_uid,t_serverip,t_serverport,t_cost,t_protocol,t_context,t_target,t_colonymsg,t_state,t_stime) " +
-                "values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql="insert into tasks(t_id,t_name,t_type,t_uid,t_serverip,t_serverport,t_serverurl,t_cost,t_protocol,t_context,t_target,t_colonymsg,t_state,t_stime) " +
+                "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         int ok;
         try {
-            ok=jdbcTemplate.update(sql,t.getT_id(), t.getT_name(),t.getT_type(),t.getT_uid(),t.getT_serverip(),t.getT_serverport(),
+            ok=jdbcTemplate.update(sql,t.getT_id(), t.getT_name(),t.getT_type(),t.getT_uid(),t.getT_serverip(),t.getT_serverport(),t.getT_serverurl(),
                     t.getT_cost(),t.getT_protocol(),t.getT_context(),t.getT_target(),t.getT_colonymsg(),t.getT_state(),t.getT_stime());
         }catch (Exception ex){
             LogUtil.error(ex.toString());

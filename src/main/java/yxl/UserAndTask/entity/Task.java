@@ -17,6 +17,7 @@ public class Task{
     private String t_uid;
     private String t_serverip;
     private String t_serverport;
+    private String t_serverurl;
     private float t_cost;
     private String t_protocol;
     private String t_context;

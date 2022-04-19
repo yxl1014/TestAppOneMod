@@ -23,6 +23,7 @@ public class UserServiceImpl {
         if (user.getU_tel() == null || user.getU_password() == null)
             return null;
         String tel = user.getU_tel();
+
         String password = DigestUtils.md5DigestAsHex(user.getU_password().getBytes());
         return util.findbyTelAndPassword(tel, password);
     }

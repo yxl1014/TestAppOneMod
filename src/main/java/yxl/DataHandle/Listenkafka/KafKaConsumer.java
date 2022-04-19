@@ -12,16 +12,27 @@ import yxl.UserAndTask.entity.T_result;
 import yxl.UserAndTask.util.GsonUtil;
 import yxl.UserAndTask.util.LogUtil;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
 @Component
 public class KafKaConsumer {
+
     @Autowired
     private DirData data;
 
     @KafkaListener(topics = {"topic1"})
-    public void onMessage1(ConsumerRecord<?, ?> record) {
+    public void onMessage1(List<ConsumerRecord<?, ?>> list) {
 // 消费的哪个topic、partition的消息,打印出消息内容
-        data.doData(GsonUtil.fromJson(record.value().toString(), T_result.class));
-        LogUtil.info("简单消费：" + record.topic() + "-" + record.partition() + "-" + record.value());
+        for (ConsumerRecord<?, ?> record : list) {
+            Optional<?> kafkaMessage = Optional.ofNullable(record.value());
+            if (kafkaMessage.isPresent()) {
+                data.doData(GsonUtil.fromJson(record.value().toString(), T_result.class));
+                LogUtil.info("简单消费：" + record.topic() + "-" + record.partition() + "-" + record.value());
+            }
+        }
+
     }
 
     @KafkaListener(topics = {"topic2"})
@@ -40,7 +51,7 @@ public class KafKaConsumer {
 
     @Bean
     public NewTopic dlt() {
-        return new NewTopic("topic12", 1, (short) 1);
+        return new NewTopic("topic2", 1, (short) 1);
     }
 
 

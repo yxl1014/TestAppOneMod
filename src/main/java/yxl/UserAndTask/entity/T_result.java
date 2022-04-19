@@ -10,6 +10,17 @@ import java.sql.Timestamp;
 @NoArgsConstructor
 @AllArgsConstructor
 public class T_result {
+    //{"tr_id":"20211120081617Gi01Yg23",
+    // "tr_utwid":0,
+    // "tr_uip":"127.0.1.1",
+    // "tr_uid":"20211119121400Yk48",
+    // "tr_code":11,
+    // "tr_isSuccess":true,
+    // "tr_target":"yyyyyy",
+    // "tr_value":"Hello World",
+    // "tr_message":"Hello World",
+    // "tr_reqtime":"Feb 10, 2022 9:40:29 PM",
+    // "tr_resptime":"Feb 10, 2022 9:40:29 PM"}
     private int tr_id;
     private int tr_utwid;
     private String tr_uip;

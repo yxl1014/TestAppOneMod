@@ -43,3 +43,6 @@ spring:
     listener:
       missing-topics-fatal: false
       type: batch
+
+hadoop.name-node: hdfs://localhost:9000
+hadoop.namespace: /testapp
