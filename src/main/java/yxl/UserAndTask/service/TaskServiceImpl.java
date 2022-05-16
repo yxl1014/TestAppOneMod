@@ -98,7 +98,7 @@ public class TaskServiceImpl {
                 List<Ut_working> utws = utwUtil.findNookTasks(ut.getUt_id());//查找所有还没有执行完任务
                 if (utws.size() == 0)
                     continue;
-                data.pushData();//清空数据接受缓存
+                //data.pushData(utws.get(0).getUtw_id());//清空数据接受缓存
                 int result = 0;//请求成功总条数
                 for (Ut_working utw : utws) {//遍历
                     utwUtil.updateState(utw.getUtw_id(), 0);//修改任务进行时状态

@@ -11,9 +11,14 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.sql.Timestamp;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
@@ -50,7 +55,7 @@ public class HadoopTests {
         Configuration configuration = new Configuration();
         FileSystem fs = FileSystem.get(new URI(nameNode), configuration);
         //2.执行操作 上传文件
-        fs.copyFromLocalFile(false,true, new Path("/opt/tar.gz/hadoop3/hadoop3.0安装手顺"), new Path(filePath));
+        fs.copyFromLocalFile(false, true, new Path("/opt/tar.gz/hadoop3/hadoop3.0安装手顺"), new Path(filePath));
         //关闭资源
         fs.close();
         System.out.println("结束！");
@@ -63,9 +68,29 @@ public class HadoopTests {
         Configuration configuration = new Configuration();
         FileSystem fs = FileSystem.get(new URI(nameNode), configuration);
         //2.执行操作 下载文件
-        fs.copyToLocalFile(false, new Path(filePath+"/hadoop3.0安装手顺"), new Path("/data"), true);
+        fs.copyToLocalFile(false, new Path(filePath + "/hadoop3.0安装手顺"), new Path("/data"), true);
         //关闭资源
         fs.close();
         System.out.println("结束！");
+    }
+
+    @Test
+    public void timeTest() throws InterruptedException {
+        Timestamp start = new Timestamp(System.currentTimeMillis());
+        Thread.sleep(3000);
+        Timestamp end = new Timestamp(System.currentTimeMillis());
+        Date date1 = new java.sql.Date(end.getTime());
+        Date date2 = new java.sql.Date(start.getTime());
+
+        long date = date1.getTime() - date2.getTime();
+        System.out.println(date);
+    }
+
+    @Test
+    public void filetest(){
+        File file=new File("/home/yxl/IdeaProjects/TestAppOneMod/logs/TestApp/info.log");
+        File file1=new File("/home/yxl/IdeaProjects/TestAppOneMod/logs/TestApp/error.log");
+        System.out.println("info size"+file.length());
+        System.out.println("error size"+file1.length());
     }
 }
