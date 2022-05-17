@@ -44,5 +44,6 @@ spring:
       missing-topics-fatal: false
       type: batch
 
-hadoop.name-node: hdfs://localhost:9000
-hadoop.namespace: /testapp
+hadoop.name-node: hdfs://127.0.0.1:9000
+hadoop.namespace: /testapp/
+local.srcUrl: /home/yxl/IdeaProjects/TestAppOneMod/hadoopFile/

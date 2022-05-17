@@ -24,7 +24,7 @@ public class FileAsyncConfiguration {
         // 缓冲队列：用来缓冲执行任务的队列
         executor.setQueueCapacity(500);
         // 允许线程的空闲时间60秒：当超过了核心线程之外的线程在空闲时间到达之后会被销毁
-        executor.setKeepAliveSeconds(60);
+        executor.setKeepAliveSeconds(20);
         // 线程池名的前缀：设置好了之后可以方便我们定位处理任务所在的线程池
         executor.setThreadNamePrefix("file-executor-");
         // 缓冲队列满了之后的拒绝策略：由调用线程处理（一般是主线程）
@@ -33,7 +33,26 @@ public class FileAsyncConfiguration {
         return executor;
     }
 
-    @Bean("filmsSet")
+    @Bean("filePushExecutor")
+    public Executor doPushExecutor() {
+        ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
+        // 核心线程数：线程池创建时候初始化的线程数
+        executor.setCorePoolSize(30);
+        // 最大线程数：线程池最大的线程数，只有在缓冲队列满了之后才会申请超过核心线程数的线程
+        executor.setMaxPoolSize(50);
+        // 缓冲队列：用来缓冲执行任务的队列
+        executor.setQueueCapacity(50);
+        // 允许线程的空闲时间60秒：当超过了核心线程之外的线程在空闲时间到达之后会被销毁
+        executor.setKeepAliveSeconds(60);
+        // 线程池名的前缀：设置好了之后可以方便我们定位处理任务所在的线程池
+        executor.setThreadNamePrefix("file-Push-executor-");
+        // 缓冲队列满了之后的拒绝策略：由调用线程处理（一般是主线程）
+        executor.setRejectedExecutionHandler(new ThreadPoolExecutor.DiscardPolicy());
+        executor.initialize();
+        return executor;
+    }
+
+    @Bean("filesSet")
     public Set<String> makeSet() {
         return new ConcurrentSkipListSet<>();
     }

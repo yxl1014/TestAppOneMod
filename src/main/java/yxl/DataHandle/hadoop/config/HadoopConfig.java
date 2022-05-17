@@ -6,13 +6,13 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import yxl.UserAndTask.util.LogUtil;
 
 import java.net.URI;
 
 @Configuration
-@ConditionalOnProperty(name="hadoop.name-node")
-@Slf4j
 public class HadoopConfig {
+
     @Value("${hadoop.name-node}")
     private String nameNode;
 
@@ -39,10 +39,10 @@ public class HadoopConfig {
 
         // 返回指定的文件系统,如果在本地测试，需要使用此种方法获取文件系统
         try {
-            URI uri = new URI(nameNode.trim());
-            fs = FileSystem.get(uri,conf,"root");
+            URI uri = new URI(nameNode);
+            fs = FileSystem.get(uri,conf);
         } catch (Exception e) {
-            log.error("", e);
+            LogUtil.error("", e);
         }
 
         System.out.println("fs.defaultFS: "+conf.get("fs.defaultFS"));

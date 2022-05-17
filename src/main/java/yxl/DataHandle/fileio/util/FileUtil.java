@@ -1,5 +1,6 @@
 package yxl.DataHandle.fileio.util;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,12 +13,12 @@ import java.io.IOException;
 @Component
 public class FileUtil {
 
-    private final String dirUrl = "/home/yxl/IdeaProjects/TestAppOneMod/hadoopFile/";
+    @Value("${local.srcUrl}")
+    private String dirUrl;
 
     @Async("fileExecutor")
     @Transactional(rollbackFor = Exception.class)
     public void writeFile(String filename, String data) {
-        LogUtil.info(data + "is in file");
         File directory = new File(dirUrl);
         if (!directory.exists()) {
             directory.mkdir();
@@ -27,8 +28,8 @@ public class FileUtil {
             File file = new File(dirUrl + filename);
             if (!file.exists())
                 file.createNewFile();
-            fw = new FileWriter(file,true);
-            LogUtil.info("每次写入文件的数据量是---------------------------------" + data.length());
+            fw = new FileWriter(file, true);
+            LogUtil.info("写入文件的数据量是--->" + data.length());
             fw.write(data);
             fw.flush();
         } catch (IOException e) {
@@ -42,5 +43,12 @@ public class FileUtil {
                 }
             }
         }
+    }
+
+    public boolean rmFile(String filename) {
+        File file = new File(dirUrl + filename);
+        if (!file.exists())
+            return true;
+        return file.delete();
     }
 }

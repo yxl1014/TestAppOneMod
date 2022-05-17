@@ -155,10 +155,8 @@ public class UtServiceImpl {
         List<Ut_working> utws = utw.findNookTasks(ut.getUt_id());
         for (Ut_working w : utws) {
             utw.updateState(w.getUtw_id(), 0);
+            data.pushData(w);
         }
-
-        //data.pushData();
-
         return 0;
     }
 

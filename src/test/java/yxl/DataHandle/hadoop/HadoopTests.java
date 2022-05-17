@@ -28,8 +28,9 @@ public class HadoopTests {
     @Value("${hadoop.name-node}")
     private String nameNode;
 
-    @Value("${hadoop.name-node}")
+    @Value("${hadoop.namespace}")
     private String filePath;
+
 
     @Test
     public void init() throws URISyntaxException, IOException {
