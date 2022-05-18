@@ -29,7 +29,7 @@ public class KafKaConsumer {
             Optional<?> kafkaMessage = Optional.ofNullable(record.value());
             if (kafkaMessage.isPresent()) {
                 data.doData(GsonUtil.fromJson(record.value().toString(), T_result.class));
-                LogUtil.info("简单消费：" + record.topic() + "-" + record.partition() + "-" + record.value());
+                //LogUtil.info("简单消费：" + record.topic() + "-" + record.partition() + "-" + record.value());
             }
         }
 
@@ -40,7 +40,7 @@ public class KafKaConsumer {
 // 消费的哪个topic、partition的消息,打印出消息内容
         for (ConsumerRecord record : records) {
             data.doData(GsonUtil.fromJson(record.value().toString(), T_result.class));
-            LogUtil.info("简单消费：" + record.topic() + "-" + record.partition() + "-" + record.value());
+            //LogUtil.info("简单消费：" + record.topic() + "-" + record.partition() + "-" + record.value());
         }
     }
 

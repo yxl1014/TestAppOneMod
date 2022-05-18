@@ -58,15 +58,6 @@ public class UpdateUt_working {
     }
 
     public boolean updateResultbyUtwid(int utwid, int result) {//修改数量
-/*
-        String sql1 = "select utw_result from ut_working where utw_id=?";
-        Integer i = jdbcTemplate.queryForObject(sql1, Integer.class, utwid);
-        if (i == null) {
-            LogUtil.error("该任务不存在！");
-            return false;
-        }
-        int update = i + result;
-*/
         String sql = "update ut_working set utw_result=utw_result+? where utw_id=?";
         int ok;
         try {

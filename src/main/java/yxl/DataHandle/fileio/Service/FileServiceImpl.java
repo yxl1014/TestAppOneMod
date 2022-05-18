@@ -87,10 +87,10 @@ public class FileServiceImpl implements FileService {
         return true;
     }
 
-    public long getTestTime(Timestamp end, Timestamp start) {//返回秒级差距
+    public long getTestTime(Timestamp end, Timestamp start) {//返回毫秒级差距
         Date e = new java.sql.Date(end.getTime());
         Date s = new java.sql.Date(start.getTime());
         long date = e.getTime() - s.getTime();
-        return date / 1000;
+        return date/* / 1000*/;
     }
 }

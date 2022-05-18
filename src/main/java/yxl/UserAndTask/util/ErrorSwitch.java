@@ -25,6 +25,12 @@ public class ErrorSwitch {
             case 5:
                 msg = "你没有接受该任务";
                 break;
+            case 6:
+                msg = "该任务正在测试";
+                break;
+            case 7:
+                msg = "该任务以结束，请重新接受任务";
+                break;
             default:
                 msg = "服务器遇到未预测的错误！";
         }

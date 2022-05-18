@@ -112,12 +112,23 @@ public class UtServiceImpl {
             return null;
         }
 
+        if (!"暂停".equals(ut.getUt_state())) {
+            if ("结束".equals(ut.getUt_state())) {
+                integer.set(7);//该任务以结束，请重新接受任务
+            } else
+                integer.set(6);//该任务测试中
+            return null;
+        }
+
+
         Ut_working ut_working = new Ut_working(ut.getUt_id(), new Timestamp(new Date().getTime()));
         boolean ok = utw.insertut(ut_working);
         if (ok) {
             ut_working = utw.findutwbyNew(ut_working);
             if (ut_working == null)
                 return null;
+            if (!uts.updateState("测试中", ut.getUt_id()))
+                LogUtil.warn("Ut表,utid:" + ut.getUt_id() + ",该接受任务状态修改失败！");
             redisUtil.setex(String.valueOf(ut_working.getUtw_id()), ut_working, 60 * 60);
             integer.set(0);
             return ut_working;
@@ -155,6 +166,10 @@ public class UtServiceImpl {
         List<Ut_working> utws = utw.findNookTasks(ut.getUt_id());
         for (Ut_working w : utws) {
             utw.updateState(w.getUtw_id(), 0);
+            if (!uts.updateState("暂停", ut.getUt_id()))
+                LogUtil.warn("Ut表,utid:" + ut.getUt_id() + ",该接受任务状态修改失败！");
+            if (!uts.updateResult(ut.getUt_allresult() + w.getUtw_result(), ut.getUt_id()))
+                LogUtil.warn("数据没有入库成功");//修改任务接受任务表的总条数
             data.pushData(w);
         }
         return 0;

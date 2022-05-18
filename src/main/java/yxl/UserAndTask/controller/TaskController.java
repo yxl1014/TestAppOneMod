@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.*;
 import yxl.UserAndTask.annotation.LogWeb;
 import yxl.UserAndTask.entity.Result;
 import yxl.UserAndTask.entity.Task;
-import yxl.UserAndTask.entity.Ut;
 import yxl.UserAndTask.entity.Ut_working;
 import yxl.UserAndTask.service.TaskServiceImpl;
 import yxl.UserAndTask.service.UtServiceImpl;

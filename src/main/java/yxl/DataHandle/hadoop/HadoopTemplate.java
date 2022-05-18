@@ -119,7 +119,7 @@ public class HadoopTemplate {
 
     /**
      * 删除文件或者文件目录
-     *
+     *w
      * @param path
      */
     public void rmdir(String path, String fileName) {

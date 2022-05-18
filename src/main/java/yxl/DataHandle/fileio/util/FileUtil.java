@@ -29,7 +29,7 @@ public class FileUtil {
             if (!file.exists())
                 file.createNewFile();
             fw = new FileWriter(file, true);
-            LogUtil.info("写入文件的数据量是--->" + data.length());
+            //LogUtil.info("写入文件的数据量是--->" + data.length());
             fw.write(data);
             fw.flush();
         } catch (IOException e) {
