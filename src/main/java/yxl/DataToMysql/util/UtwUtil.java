@@ -61,4 +61,8 @@ public class UtwUtil {
     public List<Ut_working> findNookTasks(String utid) {
         return select.findNookTasks(utid);
     }
+
+    public List<Ut_working> findOkTasks(String utid) {
+        return select.findOkTasks(utid);
+    }
 }

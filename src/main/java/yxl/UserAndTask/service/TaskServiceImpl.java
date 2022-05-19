@@ -9,10 +9,7 @@ import yxl.DataToMysql.util.TaskUtil;
 import yxl.DataToMysql.util.UtUtil;
 import yxl.DataToMysql.util.UtwUtil;
 import yxl.DataToRedis.util.RedisUtil;
-import yxl.UserAndTask.entity.Task;
-import yxl.UserAndTask.entity.User;
-import yxl.UserAndTask.entity.Ut;
-import yxl.UserAndTask.entity.Ut_working;
+import yxl.UserAndTask.entity.*;
 import yxl.UserAndTask.util.IdsUtil;
 import yxl.UserAndTask.util.LocalTask;
 import yxl.UserAndTask.util.LogUtil;
@@ -20,8 +17,10 @@ import yxl.UserAndTask.util.TlUserUtil;
 
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @Service
 public class TaskServiceImpl {
@@ -116,5 +115,47 @@ public class TaskServiceImpl {
 
     public Task findTaskbyId(String t_id) {
         return util.findTaskbyId(t_id);
+    }
+
+    public TestResult getTaskResult(String tid, AtomicInteger ok) {
+        Task t = util.findTaskbyId(tid);
+
+        if (t == null) {
+            ok.set(3);
+            return null;
+        }
+        if ("准备中".equals(t.getT_state())) {
+            ok.set(8);
+            return null;
+        }
+        TestResult result = new TestResult();
+        result.setTid(tid);
+        result.setTstate(t.getT_state());
+
+        List<Ut> uts = utUtil.findutbyTid(tid);
+        if (uts.size() == 0) {
+            ok.set(9);
+            return null;
+        }
+        long cost = 0L;
+        for (Ut ut : uts) {
+            cost += ut.getUt_allresult();
+            TestDetails testDetails = new TestDetails();
+            testDetails.setUid(ut.getUt_uid());
+            testDetails.setNums((long) ut.getUt_allresult());
+            testDetails.setStatu(ut.getUt_state());
+            testDetails.setGettime(ut.getUt_time());
+
+            List<Ut_working> ut_workings = utwUtil.findNookTasks(ut.getUt_id());
+            testDetails.setCost(ut_workings.size());
+            //TODO:查询hdfs统计出成功率
+        }
+        result.setTnum(uts.size());
+        result.setTcost(cost);
+        //TODO:之后可以把这些数据存入mysql，不用每次查询都要再算一遍
+
+        List<TestDetails> details = new ArrayList<>();
+        result.setTid(tid);
+        return null;
     }
 }

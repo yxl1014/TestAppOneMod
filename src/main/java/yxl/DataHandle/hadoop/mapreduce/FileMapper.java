@@ -11,10 +11,10 @@ public class FileMapper extends Mapper<LongWritable, Text, Text, LongWritable> {
     protected void map(LongWritable key, Text value, Mapper<LongWritable, Text, Text, LongWritable>.Context context) throws IOException, InterruptedException {
         String[] rows = value.toString().split(",");
         for (String r : rows) {
-            String[] collctions = r.split(" ");
-            for (String c : collctions) {
-                context.write(new Text(c), new LongWritable(1));
-            }
+            /*String[] collctions = r.split(" ");
+            for (String c : collctions) {*/
+            context.write(new Text(r), new LongWritable(1));
+            //}
         }
     }
 }
