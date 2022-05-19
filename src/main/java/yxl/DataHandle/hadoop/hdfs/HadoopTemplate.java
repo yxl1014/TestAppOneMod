@@ -1,4 +1,4 @@
-package yxl.DataHandle.hadoop;
+package yxl.DataHandle.hadoop.hdfs;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.hadoop.fs.FileSystem;

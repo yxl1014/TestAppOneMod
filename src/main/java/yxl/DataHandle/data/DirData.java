@@ -7,17 +7,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import yxl.DataHandle.fileio.Service.FileService;
 import yxl.DataHandle.fileio.util.FileUtil;
-import yxl.DataHandle.hadoop.HadoopTemplate;
+import yxl.DataHandle.hadoop.hdfs.HadoopTemplate;
+import yxl.DataHandle.hadoop.mapreduce.service.MapReduceService;
 import yxl.DataToMysql.util.UtwUtil;
 import yxl.UserAndTask.entity.T_result;
 import yxl.UserAndTask.entity.Ut_working;
 import yxl.UserAndTask.util.LogUtil;
 
-import javax.annotation.PreDestroy;
-import javax.annotation.Resource;
-import java.io.File;
 import java.util.Set;
-import java.util.concurrent.Executor;
 import java.util.concurrent.TimeUnit;
 
 
@@ -30,9 +27,6 @@ public class DirData {
     private FileService fileService;
 
     @Autowired
-    private HadoopTemplate hadoopTemplate;
-
-    @Autowired
     private FileUtil fileUtil;
 
     @Autowired
@@ -43,6 +37,12 @@ public class DirData {
 
     @Value("${hadoop.namespace}")
     private String destUrl;
+
+    @Autowired
+    private HadoopTemplate hadoopTemplate;
+
+    @Autowired
+    private MapReduceService mapReduceService;
 
 
     public void doData(T_result tr) {
@@ -63,11 +63,16 @@ public class DirData {
         }
         String fname = utw.getUtw_utid() + "_" + utw.getUtw_id() + "_result";
         if (filesSet.contains(fname)) {
-
             hadoopTemplate.copyFileToHDFS(false, true, srcUrl + fname, destUrl + fname);
             if (!fileUtil.rmFile(fname))
                 LogUtil.error(fname + "is delete fail!");
             filesSet.remove(fname);
+            String outname = utw.getUtw_utid() + "_" + utw.getUtw_id();
+            try {
+                mapReduceService.fileCount(outname, fname, outname + "_out");
+            } catch (Exception e) {
+                LogUtil.warn(e.getMessage());
+            }
         } else
             LogUtil.warn(fname + "in Set is not exist");
     }
