@@ -47,4 +47,5 @@ spring:
 hadoop.name-node: hdfs://127.0.0.1:9000
 hadoop.namespace: /testapp/
 hadoop.out: /out/
-local.srcUrl: /home/yxl/IdeaProjects/TestAppOneMod/hadoopFile/
+local.srcUrl: /home/yxl/IdeaProjects/TestAppOneMod/hadoopFile/temptoUpload/
+download.srcUrl: /home/yxl/IdeaProjects/TestAppOneMod/hadoopFile/temptoDownload/

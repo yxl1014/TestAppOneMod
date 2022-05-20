@@ -3,8 +3,12 @@ package yxl.UserAndTask.service;
 
 import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import yxl.DataHandle.data.DirData;
+import yxl.DataHandle.fileio.Service.FileService;
+import yxl.DataHandle.fileio.util.FileUtil;
+import yxl.DataHandle.hadoop.hdfs.HadoopTemplate;
 import yxl.DataToMysql.util.TaskUtil;
 import yxl.DataToMysql.util.UtUtil;
 import yxl.DataToMysql.util.UtwUtil;
@@ -20,6 +24,7 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @Service
@@ -42,6 +47,18 @@ public class TaskServiceImpl {
 
     @Autowired
     private LocalTask localTable;
+
+    @Autowired
+    private HadoopTemplate hadoopTemplate;
+
+    @Autowired
+    private FileUtil fileUtil;
+
+    @Value("${hadoop.out}")
+    private String outUrl;
+
+    @Value("${download.srcUrl}")
+    private String downUrl;
 
     public List<Task> getAll() {
         List<Task> tasks = util.findTasks();
@@ -137,8 +154,11 @@ public class TaskServiceImpl {
             ok.set(9);
             return null;
         }
+        List<TestDetails> details = new ArrayList<>();
         long cost = 0L;
+        long success = 0L;
         for (Ut ut : uts) {
+            long s = 0L;
             cost += ut.getUt_allresult();
             TestDetails testDetails = new TestDetails();
             testDetails.setUid(ut.getUt_uid());
@@ -146,16 +166,30 @@ public class TaskServiceImpl {
             testDetails.setStatu(ut.getUt_state());
             testDetails.setGettime(ut.getUt_time());
 
-            List<Ut_working> ut_workings = utwUtil.findNookTasks(ut.getUt_id());
+            List<Ut_working> ut_workings = utwUtil.findOkTasks(ut.getUt_id());
             testDetails.setCost(ut_workings.size());
-            //TODO:查询hdfs统计出成功率
+
+            for (Ut_working utw : ut_workings) {
+                String name = utw.getUtw_utid() + "_" + utw.getUtw_id() + "_out/part-r-00000";
+                hadoopTemplate.getFile(outUrl + name, downUrl);
+                Map<String, Integer> cows = fileUtil.readMrFile("part-r-00000");
+                fileUtil.rmFile("part-r-00000");
+                for (String ss : cows.keySet()) {
+                    if (ss.contains("是否成功 true"))
+                        s += cows.get(ss);
+                    //TODO:之后分析的数据可以更详细
+                }
+            }
+            testDetails.setSuccess((1.0 * s) / (1.0 * ut.getUt_allresult()));
+            success += s;
+            details.add(testDetails);
         }
         result.setTnum(uts.size());
         result.setTcost(cost);
+        result.setSuccess((1.0 * success) / (1.0 * cost));
+        result.setMore(details);
         //TODO:之后可以把这些数据存入mysql，不用每次查询都要再算一遍
 
-        List<TestDetails> details = new ArrayList<>();
-        result.setTid(tid);
-        return null;
+        return result;
     }
 }

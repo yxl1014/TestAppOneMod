@@ -4,6 +4,7 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import yxl.UserAndTask.annotation.LogWeb;
+import yxl.UserAndTask.annotation.NoToken;
 import yxl.UserAndTask.entity.Result;
 import yxl.UserAndTask.entity.Task;
 import yxl.UserAndTask.entity.TestResult;
@@ -92,6 +93,7 @@ public class TaskController {
 
     @PostMapping("/cons/getTaskResult")
     @ResponseBody
+    @NoToken
     @LogWeb(url = "/tasks/cons/getTaskResult", op = "生产者获取任务测试情况", type = "任务操作")
     public String getTaskResult(@RequestBody Task task) {
         if (task == null || StringUtils.isEmpty(task.getT_id()))
@@ -101,7 +103,7 @@ public class TaskController {
 
         TestResult result = taskService.getTaskResult(tid, ok);
 
-        return GsonUtil.toJson(new Result(ErrorSwitch.getValue(ok.get()), null));
+        return GsonUtil.toJson(new Result(result == null ? ErrorSwitch.getValue(ok.get()) : GsonUtil.toJson(result), null));
     }
 
 
