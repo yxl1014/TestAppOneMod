@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+// 指定模板类的包路径
+option java_package = "yxl.dto";
+// 指定模板类的名称，名称必须是有实际业务意义的
+option java_outer_classname = "ServerProto";
+
+
+message Ping{
+}
