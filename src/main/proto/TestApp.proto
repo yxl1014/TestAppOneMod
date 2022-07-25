@@ -5,6 +5,24 @@ option java_package = "yxl.dto";
 // 指定模板类的名称，名称必须是有实际业务意义的
 option java_outer_classname = "ServerProto";
 
+enum AllType{
+  TypePing = 0;
+  TypePong = 1;
+  TypeTaskTimer = 2;
+}
+
 
 message Ping{
+}
+
+message TaskTimer{
+  optional string tid = 1;
+  optional int64 sendTime = 2;
+  optional int32 tType = 3;
+}
+
+message Pong{
+  optional int32 status = 1;
+  repeated TaskTimer task = 2;
+  optional string msg = 3;
 }
