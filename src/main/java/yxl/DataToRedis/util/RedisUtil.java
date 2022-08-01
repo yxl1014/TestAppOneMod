@@ -3,8 +3,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
-import yxl.UserAndTask.util.GsonUtil;
-import yxl.UserAndTask.util.LogUtil;
+import yxl.utils.GsonUtil;
+import yxl.utils.LogUtil;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;

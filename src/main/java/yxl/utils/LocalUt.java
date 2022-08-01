@@ -1,4 +1,4 @@
-package yxl.UserAndTask.util;
+package yxl.utils;
 
 import lombok.NonNull;
 import org.springframework.stereotype.Component;

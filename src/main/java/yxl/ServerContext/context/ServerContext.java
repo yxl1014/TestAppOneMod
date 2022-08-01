@@ -1,12 +1,14 @@
 package yxl.ServerContext.context;
 
 import com.google.protobuf.InvalidProtocolBufferException;
-import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 import yxl.UserAndTask.entity.User;
-import yxl.UserAndTask.util.TlUserUtil;
+import yxl.utils.TlUserUtil;
 import yxl.dto.ServerProto;
 
-import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -14,11 +16,13 @@ import java.util.Map;
  * @Date: 2022/7/25 11:13
  */
 
-@Service
+@Component
 public class ServerContext {
 
-    @Resource(name = "TaskTimerMap")
-    private Map<String, ServerProto.TaskTimer> map;
+
+    @Autowired
+    @Qualifier(value = "taskTimerMap")
+    private HashMap<String, ServerProto.TaskTimer> map;
 
     public byte[] ping(byte[] data) {
         try {

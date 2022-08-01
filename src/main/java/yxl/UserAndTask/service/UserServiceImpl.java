@@ -7,9 +7,9 @@ import org.springframework.util.DigestUtils;
 import yxl.DataToMysql.util.UserUtil;
 import yxl.UserAndTask.entity.Producer;
 import yxl.UserAndTask.entity.User;
-import yxl.UserAndTask.util.IdsUtil;
-import yxl.UserAndTask.util.LogUtil;
-import yxl.UserAndTask.util.TlUserUtil;
+import yxl.utils.IdsUtil;
+import yxl.utils.LogUtil;
+import yxl.utils.TlUserUtil;
 
 
 @Service

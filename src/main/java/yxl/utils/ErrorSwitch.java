@@ -1,4 +1,4 @@
-package yxl.UserAndTask.util;
+package yxl.utils;
 
 public class ErrorSwitch {
     public static String getValue(int ok) {

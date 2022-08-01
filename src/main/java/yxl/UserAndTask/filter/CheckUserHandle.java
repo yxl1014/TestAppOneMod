@@ -9,9 +9,9 @@ import yxl.DataToMysql.util.UserUtil;
 import yxl.UserAndTask.annotation.LogWeb;
 import yxl.UserAndTask.annotation.NoToken;
 import yxl.UserAndTask.entity.User;
-import yxl.UserAndTask.util.JWTUtil;
-import yxl.UserAndTask.util.LogUtil;
-import yxl.UserAndTask.util.TlUserUtil;
+import yxl.utils.JWTUtil;
+import yxl.utils.LogUtil;
+import yxl.utils.TlUserUtil;
 
 
 import javax.servlet.http.HttpServletRequest;
@@ -66,11 +66,11 @@ public class CheckUserHandle implements HandlerInterceptor {
     }
 
     @Override
-    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
+    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView){
     }
 
     @Override
-    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex){
         TlUserUtil.removeThreadLocal();
     }
 }

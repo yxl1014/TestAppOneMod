@@ -1,10 +1,9 @@
 package yxl.ServerContext.TimerJob;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-import yxl.UserAndTask.util.LogUtil;
+import yxl.utils.LogUtil;
 
 /**
  * @Author: yxl

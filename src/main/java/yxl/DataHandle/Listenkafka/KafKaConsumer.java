@@ -9,10 +9,8 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 import yxl.DataHandle.data.DirData;
 import yxl.UserAndTask.entity.T_result;
-import yxl.UserAndTask.util.GsonUtil;
-import yxl.UserAndTask.util.LogUtil;
+import yxl.utils.GsonUtil;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 

@@ -6,7 +6,7 @@ import org.apache.hadoop.fs.Path;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import yxl.UserAndTask.util.LogUtil;
+import yxl.utils.LogUtil;
 
 import javax.annotation.PostConstruct;
 import java.io.IOException;

@@ -5,7 +5,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import yxl.UserAndTask.entity.T_result;
 import yxl.UserAndTask.entity.Ut_working;
-import yxl.UserAndTask.util.LogUtil;
+import yxl.utils.LogUtil;
 
 
 import java.sql.Timestamp;

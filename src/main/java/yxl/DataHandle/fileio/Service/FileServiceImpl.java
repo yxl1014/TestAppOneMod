@@ -10,7 +10,7 @@ import yxl.DataToMysql.util.UtwUtil;
 import yxl.UserAndTask.entity.T_result;
 import yxl.UserAndTask.entity.Ut;
 import yxl.UserAndTask.entity.Ut_working;
-import yxl.UserAndTask.util.LogUtil;
+import yxl.utils.LogUtil;
 
 import java.sql.Timestamp;
 import java.util.Date;

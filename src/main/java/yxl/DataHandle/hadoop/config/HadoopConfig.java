@@ -4,7 +4,7 @@ import org.apache.hadoop.fs.FileSystem;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import yxl.UserAndTask.util.LogUtil;
+import yxl.utils.LogUtil;
 
 import java.net.URI;
 

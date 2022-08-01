@@ -5,7 +5,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import yxl.UserAndTask.entity.Producer;
 import yxl.UserAndTask.entity.User;
-import yxl.UserAndTask.util.LogUtil;
+import yxl.utils.LogUtil;
 
 
 @Repository

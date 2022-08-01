@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import yxl.UserAndTask.entity.Ut;
-import yxl.UserAndTask.util.LogUtil;
+import yxl.utils.LogUtil;
 
 @Repository
 public class UpdateU_t {

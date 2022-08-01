@@ -2425,6 +2425,967 @@ public final class ServerProto {
 
   }
 
+  public interface UserIPOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:UserIP)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string uid = 1;</code>
+     * @return Whether the uid field is set.
+     */
+    boolean hasUid();
+    /**
+     * <code>optional string uid = 1;</code>
+     * @return The uid.
+     */
+    String getUid();
+    /**
+     * <code>optional string uid = 1;</code>
+     * @return The bytes for uid.
+     */
+    com.google.protobuf.ByteString
+        getUidBytes();
+
+    /**
+     * <code>optional string ip = 2;</code>
+     * @return Whether the ip field is set.
+     */
+    boolean hasIp();
+    /**
+     * <code>optional string ip = 2;</code>
+     * @return The ip.
+     */
+    String getIp();
+    /**
+     * <code>optional string ip = 2;</code>
+     * @return The bytes for ip.
+     */
+    com.google.protobuf.ByteString
+        getIpBytes();
+
+    /**
+     * <code>optional string pos = 3;</code>
+     * @return Whether the pos field is set.
+     */
+    boolean hasPos();
+    /**
+     * <code>optional string pos = 3;</code>
+     * @return The pos.
+     */
+    String getPos();
+    /**
+     * <code>optional string pos = 3;</code>
+     * @return The bytes for pos.
+     */
+    com.google.protobuf.ByteString
+        getPosBytes();
+  }
+  /**
+   * Protobuf type {@code UserIP}
+   */
+  public static final class UserIP extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:UserIP)
+      UserIPOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UserIP.newBuilder() to construct.
+    private UserIP(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UserIP() {
+      uid_ = "";
+      ip_ = "";
+      pos_ = "";
+    }
+
+    @Override
+    @SuppressWarnings({"unused"})
+    protected Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UserIP();
+    }
+
+    @Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UserIP(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              String s = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              uid_ = s;
+              break;
+            }
+            case 18: {
+              String s = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              ip_ = s;
+              break;
+            }
+            case 26: {
+              String s = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              pos_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ServerProto.internal_static_UserIP_descriptor;
+    }
+
+    @Override
+    protected FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ServerProto.internal_static_UserIP_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              UserIP.class, Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int UID_FIELD_NUMBER = 1;
+    private volatile Object uid_;
+    /**
+     * <code>optional string uid = 1;</code>
+     * @return Whether the uid field is set.
+     */
+    @Override
+    public boolean hasUid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string uid = 1;</code>
+     * @return The uid.
+     */
+    @Override
+    public String getUid() {
+      Object ref = uid_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        uid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string uid = 1;</code>
+     * @return The bytes for uid.
+     */
+    @Override
+    public com.google.protobuf.ByteString
+        getUidBytes() {
+      Object ref = uid_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (String) ref);
+        uid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IP_FIELD_NUMBER = 2;
+    private volatile Object ip_;
+    /**
+     * <code>optional string ip = 2;</code>
+     * @return Whether the ip field is set.
+     */
+    @Override
+    public boolean hasIp() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string ip = 2;</code>
+     * @return The ip.
+     */
+    @Override
+    public String getIp() {
+      Object ref = ip_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        ip_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string ip = 2;</code>
+     * @return The bytes for ip.
+     */
+    @Override
+    public com.google.protobuf.ByteString
+        getIpBytes() {
+      Object ref = ip_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (String) ref);
+        ip_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POS_FIELD_NUMBER = 3;
+    private volatile Object pos_;
+    /**
+     * <code>optional string pos = 3;</code>
+     * @return Whether the pos field is set.
+     */
+    @Override
+    public boolean hasPos() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional string pos = 3;</code>
+     * @return The pos.
+     */
+    @Override
+    public String getPos() {
+      Object ref = pos_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        pos_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string pos = 3;</code>
+     * @return The bytes for pos.
+     */
+    @Override
+    public com.google.protobuf.ByteString
+        getPosBytes() {
+      Object ref = pos_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (String) ref);
+        pos_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, ip_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pos_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, ip_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pos_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @Override
+    public boolean equals(final Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof UserIP)) {
+        return super.equals(obj);
+      }
+      UserIP other = (UserIP) obj;
+
+      if (hasUid() != other.hasUid()) return false;
+      if (hasUid()) {
+        if (!getUid()
+            .equals(other.getUid())) return false;
+      }
+      if (hasIp() != other.hasIp()) return false;
+      if (hasIp()) {
+        if (!getIp()
+            .equals(other.getIp())) return false;
+      }
+      if (hasPos() != other.hasPos()) return false;
+      if (hasPos()) {
+        if (!getPos()
+            .equals(other.getPos())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasUid()) {
+        hash = (37 * hash) + UID_FIELD_NUMBER;
+        hash = (53 * hash) + getUid().hashCode();
+      }
+      if (hasIp()) {
+        hash = (37 * hash) + IP_FIELD_NUMBER;
+        hash = (53 * hash) + getIp().hashCode();
+      }
+      if (hasPos()) {
+        hash = (37 * hash) + POS_FIELD_NUMBER;
+        hash = (53 * hash) + getPos().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static UserIP parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static UserIP parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static UserIP parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static UserIP parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static UserIP parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static UserIP parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static UserIP parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static UserIP parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static UserIP parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static UserIP parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static UserIP parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static UserIP parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(UserIP prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @Override
+    protected Builder newBuilderForType(
+        BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code UserIP}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:UserIP)
+        UserIPOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ServerProto.internal_static_UserIP_descriptor;
+      }
+
+      @Override
+      protected FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ServerProto.internal_static_UserIP_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                UserIP.class, Builder.class);
+      }
+
+      // Construct using yxl.dto.ServerProto.UserIP.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @Override
+      public Builder clear() {
+        super.clear();
+        uid_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        ip_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pos_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ServerProto.internal_static_UserIP_descriptor;
+      }
+
+      @Override
+      public UserIP getDefaultInstanceForType() {
+        return UserIP.getDefaultInstance();
+      }
+
+      @Override
+      public UserIP build() {
+        UserIP result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @Override
+      public UserIP buildPartial() {
+        UserIP result = new UserIP(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.uid_ = uid_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.ip_ = ip_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.pos_ = pos_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return super.setField(field, value);
+      }
+      @Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof UserIP) {
+          return mergeFrom((UserIP)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(UserIP other) {
+        if (other == UserIP.getDefaultInstance()) return this;
+        if (other.hasUid()) {
+          bitField0_ |= 0x00000001;
+          uid_ = other.uid_;
+          onChanged();
+        }
+        if (other.hasIp()) {
+          bitField0_ |= 0x00000002;
+          ip_ = other.ip_;
+          onChanged();
+        }
+        if (other.hasPos()) {
+          bitField0_ |= 0x00000004;
+          pos_ = other.pos_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        UserIP parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (UserIP) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private Object uid_ = "";
+      /**
+       * <code>optional string uid = 1;</code>
+       * @return Whether the uid field is set.
+       */
+      public boolean hasUid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string uid = 1;</code>
+       * @return The uid.
+       */
+      public String getUid() {
+        Object ref = uid_;
+        if (!(ref instanceof String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
+          uid_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      /**
+       * <code>optional string uid = 1;</code>
+       * @return The bytes for uid.
+       */
+      public com.google.protobuf.ByteString
+          getUidBytes() {
+        Object ref = uid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
+          uid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string uid = 1;</code>
+       * @param value The uid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUid(
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        uid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        uid_ = getDefaultInstance().getUid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uid = 1;</code>
+       * @param value The bytes for uid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        bitField0_ |= 0x00000001;
+        uid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Object ip_ = "";
+      /**
+       * <code>optional string ip = 2;</code>
+       * @return Whether the ip field is set.
+       */
+      public boolean hasIp() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string ip = 2;</code>
+       * @return The ip.
+       */
+      public String getIp() {
+        Object ref = ip_;
+        if (!(ref instanceof String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
+          ip_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      /**
+       * <code>optional string ip = 2;</code>
+       * @return The bytes for ip.
+       */
+      public com.google.protobuf.ByteString
+          getIpBytes() {
+        Object ref = ip_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
+          ip_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ip = 2;</code>
+       * @param value The ip to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIp(
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        ip_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ip = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIp() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        ip_ = getDefaultInstance().getIp();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ip = 2;</code>
+       * @param value The bytes for ip to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIpBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        bitField0_ |= 0x00000002;
+        ip_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Object pos_ = "";
+      /**
+       * <code>optional string pos = 3;</code>
+       * @return Whether the pos field is set.
+       */
+      public boolean hasPos() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional string pos = 3;</code>
+       * @return The pos.
+       */
+      public String getPos() {
+        Object ref = pos_;
+        if (!(ref instanceof String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
+          pos_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      /**
+       * <code>optional string pos = 3;</code>
+       * @return The bytes for pos.
+       */
+      public com.google.protobuf.ByteString
+          getPosBytes() {
+        Object ref = pos_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
+          pos_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string pos = 3;</code>
+       * @param value The pos to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPos(
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        pos_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string pos = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPos() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pos_ = getDefaultInstance().getPos();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string pos = 3;</code>
+       * @param value The bytes for pos to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPosBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        bitField0_ |= 0x00000004;
+        pos_ = value;
+        onChanged();
+        return this;
+      }
+      @Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:UserIP)
+    }
+
+    // @@protoc_insertion_point(class_scope:UserIP)
+    private static final UserIP DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new UserIP();
+    }
+
+    public static UserIP getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UserIP>
+        PARSER = new com.google.protobuf.AbstractParser<UserIP>() {
+      @Override
+      public UserIP parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UserIP(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UserIP> parser() {
+      return PARSER;
+    }
+
+    @Override
+    public com.google.protobuf.Parser<UserIP> getParserForType() {
+      return PARSER;
+    }
+
+    @Override
+    public UserIP getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Ping_descriptor;
   private static final 
@@ -2440,6 +3401,11 @@ public final class ServerProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_Pong_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_UserIP_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_UserIP_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2454,9 +3420,11 @@ public final class ServerProto {
       "\005tType\030\003 \001(\005H\002\210\001\001B\006\n\004_tidB\013\n\t_sendTimeB\010" +
       "\n\006_tType\"Z\n\004Pong\022\023\n\006status\030\001 \001(\005H\000\210\001\001\022\030\n" +
       "\004task\030\002 \003(\0132\n.TaskTimer\022\020\n\003msg\030\003 \001(\tH\001\210\001" +
-      "\001B\t\n\007_statusB\006\n\004_msg*8\n\007AllType\022\014\n\010TypeP" +
-      "ing\020\000\022\014\n\010TypePong\020\001\022\021\n\rTypeTaskTimer\020\002B\026" +
-      "\n\007yxl.dtoB\013ServerProtob\006proto3"
+      "\001B\t\n\007_statusB\006\n\004_msg\"T\n\006UserIP\022\020\n\003uid\030\001 " +
+      "\001(\tH\000\210\001\001\022\017\n\002ip\030\002 \001(\tH\001\210\001\001\022\020\n\003pos\030\003 \001(\tH\002" +
+      "\210\001\001B\006\n\004_uidB\005\n\003_ipB\006\n\004_pos*8\n\007AllType\022\014\n" +
+      "\010TypePing\020\000\022\014\n\010TypePong\020\001\022\021\n\rTypeTaskTim" +
+      "er\020\002B\026\n\007yxl.dtoB\013ServerProtob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2480,6 +3448,12 @@ public final class ServerProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Pong_descriptor,
         new String[] { "Status", "Task", "Msg", "Status", "Msg", });
+    internal_static_UserIP_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_UserIP_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_UserIP_descriptor,
+        new String[] { "Uid", "Ip", "Pos", "Uid", "Ip", "Pos", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

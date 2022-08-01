@@ -9,6 +9,7 @@ enum AllType{
   TypePing = 0;
   TypePong = 1;
   TypeTaskTimer = 2;
+  TypeUserIp = 3;
 }
 
 
@@ -25,4 +26,15 @@ message Pong{
   optional int32 status = 1;
   repeated TaskTimer task = 2;
   optional string msg = 3;
+}
+
+message UserIP{
+  optional string uid = 1;
+  optional string ip = 2;
+  optional string pos = 3;
+}
+
+message Response{
+  optional AllType type = 1;
+  optional bytes data = 2;
 }

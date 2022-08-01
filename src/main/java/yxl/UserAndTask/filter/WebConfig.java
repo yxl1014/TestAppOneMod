@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import yxl.ServerContext.filter.InitHandle;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,12 +16,16 @@ public class WebConfig implements WebMvcConfigurer {
     @Autowired
     private CheckUserHandle checkUserHandle;
 
+    @Autowired
+    private InitHandle initHandle;
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         List<String> list=new ArrayList<>();
         list.add("/users/**");
         list.add("/tasks/**");
         registry.addInterceptor(checkUserHandle).addPathPatterns(list);
+        registry.addInterceptor(initHandle).addPathPatterns("/users/login");
     }
 
     @Override

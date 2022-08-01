@@ -3,7 +3,7 @@ package yxl.ServerContext.config.Quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.springframework.scheduling.quartz.QuartzJobBean;
-import yxl.UserAndTask.util.LogUtil;
+import yxl.utils.LogUtil;
 
 /**
  * @Author: yxl

@@ -11,8 +11,8 @@ import yxl.UserAndTask.entity.TestResult;
 import yxl.UserAndTask.entity.Ut_working;
 import yxl.UserAndTask.service.TaskServiceImpl;
 import yxl.UserAndTask.service.UtServiceImpl;
-import yxl.UserAndTask.util.ErrorSwitch;
-import yxl.UserAndTask.util.GsonUtil;
+import yxl.utils.ErrorSwitch;
+import yxl.utils.GsonUtil;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;

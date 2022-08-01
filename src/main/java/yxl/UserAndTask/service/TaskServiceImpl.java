@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import yxl.DataHandle.data.DirData;
-import yxl.DataHandle.fileio.Service.FileService;
 import yxl.DataHandle.fileio.util.FileUtil;
 import yxl.DataHandle.hadoop.hdfs.HadoopTemplate;
 import yxl.DataToMysql.util.TaskUtil;
@@ -14,10 +13,10 @@ import yxl.DataToMysql.util.UtUtil;
 import yxl.DataToMysql.util.UtwUtil;
 import yxl.DataToRedis.util.RedisUtil;
 import yxl.UserAndTask.entity.*;
-import yxl.UserAndTask.util.IdsUtil;
-import yxl.UserAndTask.util.LocalTask;
-import yxl.UserAndTask.util.LogUtil;
-import yxl.UserAndTask.util.TlUserUtil;
+import yxl.utils.IdsUtil;
+import yxl.utils.LocalTask;
+import yxl.utils.LogUtil;
+import yxl.utils.TlUserUtil;
 
 
 import java.sql.Timestamp;

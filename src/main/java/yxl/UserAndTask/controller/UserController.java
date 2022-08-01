@@ -9,9 +9,9 @@ import yxl.UserAndTask.entity.Producer;
 import yxl.UserAndTask.entity.Result;
 import yxl.UserAndTask.entity.User;
 import yxl.UserAndTask.service.UserServiceImpl;
-import yxl.UserAndTask.util.ErrorSwitch;
-import yxl.UserAndTask.util.GsonUtil;
-import yxl.UserAndTask.util.JWTUtil;
+import yxl.utils.ErrorSwitch;
+import yxl.utils.GsonUtil;
+import yxl.utils.JWTUtil;
 
 
 @RestController

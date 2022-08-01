@@ -12,7 +12,7 @@ import yxl.DataHandle.hadoop.mapreduce.service.MapReduceService;
 import yxl.DataToMysql.util.UtwUtil;
 import yxl.UserAndTask.entity.T_result;
 import yxl.UserAndTask.entity.Ut_working;
-import yxl.UserAndTask.util.LogUtil;
+import yxl.utils.LogUtil;
 
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
