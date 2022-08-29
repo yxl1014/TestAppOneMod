@@ -30,7 +30,6 @@ public class InitHandle implements HandlerInterceptor {
     private PosUtil posUtil;
 
     @Autowired
-    @Qualifier(value = "userMap")
     private HashMap<String, ServerProto.UserIP> userMap;
 
     @Override

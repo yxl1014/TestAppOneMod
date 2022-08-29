@@ -25,7 +25,7 @@ public class QuartzTestConfig {
                 // 任务描述
                 .withDescription("任务描述：Quartz Test")
                 // 每次任务执行后进行存储
-                //.storeDurably()
+                .storeDurably(true)
                 .build();
     }
 

@@ -1,9 +1,7 @@
 package yxl.ServerContext.config;
 
-import org.apache.hadoop.util.hash.Hash;
-import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Bean;
-import org.springframework.scheduling.annotation.EnableAsync;
 import yxl.dto.ServerProto;
 
 import java.util.HashMap;
@@ -15,16 +13,16 @@ import java.util.Map;
  * @Date: 2022/7/25 10:48
  */
 
-@Configurable
+@Configuration
 public class CollectionBeansConfig {
 
     @Bean(name = "taskTimerMap")
     public HashMap<String, ServerProto.TaskTimer> taskTimerMap() {
-        return new HashMap<>();
+        return new HashMap<String, ServerProto.TaskTimer>();
     }
 
     @Bean(name = "userMap")
     public HashMap<String, ServerProto.UserIP> userMap() {
-        return new HashMap<>();
+        return new HashMap<String, ServerProto.UserIP>();
     }
 }

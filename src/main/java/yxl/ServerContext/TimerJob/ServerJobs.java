@@ -13,9 +13,8 @@ import yxl.utils.LogUtil;
 @Component
 public class ServerJobs {
 
-
     @Async("jobThreadPool")
-    @Scheduled(cron = "0 10 * * * ?")
+    @Scheduled(cron = "0 10 * * * *")
     public void justDoItA() {
         LogUtil.info(System.currentTimeMillis() + " : Quartz test");
     }

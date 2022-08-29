@@ -1,8 +1,8 @@
 logging:
   config: classpath:log4j_using.xml
+server:
+  port: 10607
 spring:
-  profiles:
-    active: 8080
   datasource:
     url: jdbc:mysql://localhost:3306/testapp?useUnicode=true&characterEncoding=utf8&useSSL=true&autoReconnect=true&failOverReadOnly=false
     username: root

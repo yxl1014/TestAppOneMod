@@ -8,6 +8,7 @@ import yxl.UserAndTask.entity.User;
 import yxl.utils.TlUserUtil;
 import yxl.dto.ServerProto;
 
+import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,8 +21,7 @@ import java.util.Map;
 public class ServerContext {
 
 
-    @Autowired
-    @Qualifier(value = "taskTimerMap")
+    @Resource(name = "taskTimerMap")
     private HashMap<String, ServerProto.TaskTimer> map;
 
     public byte[] ping(byte[] data) {
